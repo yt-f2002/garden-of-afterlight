@@ -3,12 +3,12 @@
   const pair=(zh,en)=>({zh,en});
   const copy={
     skip:pair('跳到正文','Skip to content'),guide:pair('玩法指南','How to play'),play:pair('进入游戏','Play the demo'),
-    bio:pair('从设计、AI 到交互体验，把视觉想法做成可以游玩的作品。','I work across design, AI and interactive experiences, turning visual ideas into playable projects.'),
+    bio:pair('我想通过这座庭院，找回被生活搁置的天赋，继续那些曾经未完成、未来仍想做的事。','Through this garden, I want to rediscover talents set aside by everyday life, return to what I left unfinished, and pursue what I still hope to do.'),
     study:pair('学习方向','Study areas'),fashion:pair('服装设计与工程','Fashion design & engineering'),creative:pair('艺术与机器创造','Arts & machine creativity'),
     experience:pair('做过的事','Experience'),evaluation:pair('AI 产品评测','AI product evaluation'),effects:pair('AI 视频特效','AI video effects'),brand:pair('品牌内容','Brand content'),interaction:pair('游戏交互设计','Game interaction design'),visuals:pair('视觉素材制作','Visual asset creation'),godot:pair('Godot 整合','Godot integration'),
     contact:pair('合作 / 工作联系','For collaborations & work'),
-    garden:pair('《遗光之庭》将剧情调查、守线与工坊制作连在一起，共有六章。','Garden of Afterlight connects story investigation, defense and hands-on crafting across six chapters.'),
-    role:pair('我负责世界观、玩法和视觉方向，使用 AI 辅助素材与代码制作。','I direct the world, gameplay and visual design, with AI assistance for assets and code.'),
+    garden:pair('生活与工作可能让人被异化，逐渐放下、丢弃，甚至遗忘自己最初的天赋。《遗光之庭》从找回这些天赋的愿望出发。','Life and work can alienate us from ourselves, leading us to set aside, abandon or forget our earliest talents. Garden of Afterlight begins with the wish to rediscover them.'),
+    role:pair('这座虚拟幻想世界，承载着我想找回的、曾经未完成的，以及未来想继续的事，也是我理想精神世界的缩影。','This imagined world holds what I want to recover, what I once left unfinished, and what I hope to continue in the future. It is a reflection of my ideal inner world.'),
     workflowTitle:pair('制作流程','Production process'),workflowIntro:pair('点击阶段，查看创作分工、工具与产出。','Select a stage to see the decisions, tools and output.'),
     iterate:pair('试玩反馈用于下一轮修改。','Playtest feedback informs the next revision.'),
     versions:pair('3D 版目前提供第一人称探索，尚未实现独立的 3D 玩法。','The 3D prototype offers first-person exploration; dedicated 3D gameplay is not yet implemented.'),credits:pair('项目说明与致谢','Project notes & credits')
