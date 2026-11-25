@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>玩法指南 · How to play — Garden of Afterlight</title>
+  <meta name="description" content="遗光之庭玩法手册：按章节查看调查、守线、工坊与伙伴的操作指引。">
+  <link rel="icon" href="assets/garden.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/handbook.css">
+  <script src="assets/handbook.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#article" data-copy="skip">跳到教程正文</a>
+  <header class="book-header">
+    <a class="book-brand" href="./"><img src="assets/garden.svg" alt=""><span>遗光之庭<small>Garden of Afterlight</small></span></a>
+    <span class="book-name" data-copy="book">玩法指南</span>
+    <div class="header-actions"><button id="language" type="button" aria-label="Switch to English">English</button><a class="ribbon" href="demo/" data-copy="play">进入庭院</a></div>
+  </header>
+  <div class="book-toolbar">
+    <div class="toolbar-inner">
+      <span class="toolbar-title" data-copy="how">玩法指南</span>
+      <nav class="categories" aria-label="教程分类" id="categories"></nav>
+      <label class="search-field"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><input type="search" id="search" placeholder="搜索章节或玩法" autocomplete="off"><kbd>/</kbd></label>
+      <button id="menu" class="directory-button" type="button" aria-expanded="false" aria-controls="directory"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span data-copy="contents">目录</span></button>
+    </div>
+  </div>
+  <div id="veil" class="directory-veil" hidden></div>
+  <div class="book-layout">
+    <aside id="directory" class="directory" aria-label="手册目录"><nav id="chapter-nav"></nav></aside>
+    <main id="article" tabindex="-1">
+      <div class="breadcrumbs"><a href="./" data-copy="home">庭院首页</a><span aria-hidden="true">/</span><span data-copy="book">玩法指南</span><span aria-hidden="true">/</span><span id="crumb"></span></div>
+      <div id="search-results" hidden></div>
+      <div id="article-content"></div>
+      <div class="page-turn" id="page-turn"></div>
+      <footer class="book-footer"><span>Garden of Afterlight</span><span data-copy="footer">把手册放在身边，按自己的节奏探索。</span></footer>
+    </main>
+  </div>
+  <noscript><p class="no-script">请启用 JavaScript 来展开章节和搜索教程。 / Enable JavaScript to browse and search the handbook.</p></noscript>
+</body>
+</html>

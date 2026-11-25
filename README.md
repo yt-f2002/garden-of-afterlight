@@ -35,6 +35,9 @@ Open the file on GitHub, choose **Edit**, make the change and commit it to `main
 
 - `site/index.html`: homepage text, navigation and experience cards.
 - `site/credits.html`: project notes.
+- `site/how-to-play.html` and `site/assets/handbook.js`: bilingual chapter and activity guidance.
+- `site/about.html` and `site/assets/about.js`: creator profile, contact and interactive production workflow.
+- `site/assets/handbook.css` and `site/assets/about.css`: handbook and About layouts.
 - `site/demo/index.html` and `site/explore-3d/index.html`: game launch screens and instructions.
 - `site/assets/site.css` and `site/assets/player.css`: website appearance.
 

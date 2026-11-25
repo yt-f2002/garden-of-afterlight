@@ -23,7 +23,8 @@
     "Audio uses stream playback to preserve generated sound.",
     "The same recap film was transcoded to 960x540 at 24fps with Vorbis audio; no scene was removed.",
     "The 3D browser entry follows the supplied --walk3d desktop shortcut.",
-    "A browser launch screen exposes download size and controls."
+    "A browser launch screen exposes download size and controls.",
+    "Bilingual chapter handbook, creator profile and interactive production workflow; game packs unchanged."
   ],
   "scope": {
     "demo": "Existing main-game entry and progression; 2D story interface with a 3D dressmaking workbench.",
@@ -67,8 +68,8 @@
       "sha256": "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3"
     },
     "demo/index.html": {
-      "bytes": 4186,
-      "sha256": "cf4d3122fd1bb6e0f65b4482460d5e8ac8289c477b6ee129d0c60696e9d5caa8"
+      "bytes": 5304,
+      "sha256": "33610a6df7e5a2ddc19e8adba899ca7553c7f001a633bfdc5c275ddc61c238df"
     },
     "demo/index.js": {
       "bytes": 279815,
@@ -115,8 +116,72 @@
       "sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
     },
     "index.html": {
-      "bytes": 4551,
-      "sha256": "ec203dd0685711e8568417ed3a75955642f3b0566e8e3979b7c9c3213e7abb56"
+      "bytes": 4923,
+      "sha256": "0db7a50a1e34521f87be913eb3a460205a609916971857bfa2b9ebf900dd4404"
+    },
+    "about.html": {
+      "bytes": 4188,
+      "sha256": "7f132593e5373d5926c28542cc78e8377a65e005d6164d32a97d7055cc05a096"
+    },
+    "assets/about.css": {
+      "bytes": 7407,
+      "sha256": "64e2c38f9353098b6a0c78a1bb71d022da33c90c3f9afff9de1d1d8f920372ec"
+    },
+    "assets/about.js": {
+      "bytes": 9328,
+      "sha256": "ba24e75d71c8d00e4b795ddd3e517005a6589dbc994a33e4bc3972cc4674a483"
+    },
+    "assets/guide/atelier.webp": {
+      "bytes": 308028,
+      "sha256": "3c45a4ba52db6f17c1b31e67cb0f9a9c3ffa9d09a844ec2cff3a8b9ec7947228"
+    },
+    "assets/guide/Baskervville.ttf": {
+      "bytes": 140076,
+      "sha256": "a08bcf988383b344aacfd34365a8cd408a4a9665caaf19dc0d716a93833a0fa7"
+    },
+    "assets/guide/companion.png": {
+      "bytes": 98368,
+      "sha256": "2138da6965291a1d1ecf199baa71cd8ef285fa7f910daf8eac33c1ccdf819431"
+    },
+    "assets/guide/metalwork.webp": {
+      "bytes": 324924,
+      "sha256": "57d52d98569cc9b2acd0c932fed881595f4bce347402e7c465f46b3b487a9adb"
+    },
+    "assets/guide/nursery.webp": {
+      "bytes": 398612,
+      "sha256": "bcf9681d58f16699e361fe72ac109b4c370ad99859b03a452790cf06c8ef2920"
+    },
+    "assets/guide/observatory.webp": {
+      "bytes": 308894,
+      "sha256": "08645c6a376c259e7dfd1a1f289644144fcb5d8f08db281291cc9050cb58f19a"
+    },
+    "assets/guide/OFL.txt": {
+      "bytes": 4400,
+      "sha256": "1eb924b634a41586eb2ea9776cde83c30822647086762ef534756bfea7b91126"
+    },
+    "assets/guide/perfumery.webp": {
+      "bytes": 336544,
+      "sha256": "058a4e7dcf64d385cf91aa3ea84c5bc346de451ae6dccb826124daabc06f2efa"
+    },
+    "assets/guide/post-office.webp": {
+      "bytes": 358372,
+      "sha256": "4a5a1dbb6ea058ca17ced561073cbe90d3b4bb8ba145500f69cf359d85801b8e"
+    },
+    "assets/handbook.css": {
+      "bytes": 11325,
+      "sha256": "6c8a5a23b87f1639d0d4f5c12c6d963582966d865daabf97b59fb4bd13f75ce2"
+    },
+    "assets/handbook.js": {
+      "bytes": 25674,
+      "sha256": "8f193c311426afb63dc0976ce0edac0d0b28d656f2cae323271db2a7bdde6c88"
+    },
+    "assets/player-handbook.css": {
+      "bytes": 892,
+      "sha256": "dfba5a9d9e005cf47e605210cef78482a01b4da21be9c9492d639e5e233d7f5e"
+    },
+    "how-to-play.html": {
+      "bytes": 2700,
+      "sha256": "dcf3ed71db6562fd38dcfa9ee27d3aeb823d32e6ef205ea5f3b41805709158d1"
     }
   }
 }

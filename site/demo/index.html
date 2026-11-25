@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The Blank Signature — Garden of Afterlight</title><link rel="stylesheet" href="../assets/player.css"><link rel="icon" href="../assets/garden.svg" type="image/svg+xml"></head>
-<body><header class="player-bar"><a href="../">Garden of Afterlight</a><span>Story & dressmaking demo</span><div><button id="help-toggle" aria-expanded="false" aria-controls="help">Controls</button><button id="fullscreen">Fullscreen</button></div></header>
-<main id="stage"><canvas id="canvas" width="1600" height="900" tabindex="0" aria-label="The Blank Signature game"></canvas><section id="launch" class="launch"><div class="launch-content"><a class="back" href="../">Back to the garden</a><p class="kind">Story & dressmaking demo</p><h1>The Blank Signature</h1><p class="description">Follow the story into the old atelier, recover materials and make a garment bearing your own signature.</p><p class="controls">Click to explore and choose dialogue. Drag to adjust patterns, cut and sew. Hold the final needle to sign your work.</p><button id="start">Start the demo</button><progress id="progress" max="100" value="0" hidden aria-label="Game download progress"></progress><p id="status" aria-live="polite">First visit downloads about 184 MB. Please keep this tab open.</p></div></section><aside id="help" hidden><h2>How to play</h2><p>Click to explore and choose dialogue. Drag to adjust patterns, cut and sew. Hold the final needle to sign your work.</p><p>English and Chinese can be selected inside the game. Saved progress stays in this browser.</p><button id="close-help">Return to game</button></aside></main>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The Blank Signature — Garden of Afterlight</title><link rel="stylesheet" href="../assets/player.css"><link rel="stylesheet" href="../assets/player-handbook.css"><link rel="icon" href="../assets/garden.svg" type="image/svg+xml"></head>
+<body><header class="player-bar"><a href="../">Garden of Afterlight</a><span>Story & dressmaking demo</span><div><button id="help-toggle" aria-expanded="false" aria-controls="help" aria-haspopup="dialog">How to play</button><button id="fullscreen">Fullscreen</button></div></header>
+<main id="stage"><canvas id="canvas" width="1600" height="900" tabindex="0" aria-label="The Blank Signature game"></canvas><section id="launch" class="launch"><div class="launch-content"><a class="back" href="../">Back to the garden</a><p class="kind">Story & dressmaking demo</p><h1>The Blank Signature</h1><p class="description">Follow the story into the old atelier, recover materials and make a garment bearing your own signature.</p><p class="controls">Click to explore and choose dialogue. Drag to adjust patterns, cut and sew. Hold the final needle to sign your work.</p><button id="start">Start the demo</button><progress id="progress" max="100" value="0" hidden aria-label="Game download progress"></progress><p id="status" aria-live="polite">First visit downloads about 184 MB. Please keep this tab open.</p></div></section><aside id="help" role="dialog" aria-modal="true" aria-labelledby="help-title" hidden><div class="handbook-bar"><h2 id="help-title">How to play · 玩法指南</h2><button id="close-help" type="button">Return to game / 返回游戏 <span aria-hidden="true">×</span></button></div><iframe id="handbook-frame" title="Garden of Afterlight bilingual handbook" data-src="../how-to-play.html?embedded=1"></iframe></aside></main>
 <script src="index.js"></script><script>
 const GODOT_CONFIG={"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":144678712,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
 GODOT_CONFIG.canvasResizePolicy=0;
@@ -19,7 +19,19 @@ start.addEventListener('click',async()=>{
   catch(error){console.error(error);status.textContent='The game could not start. Reload this page and try Chrome or Edge. '+error.message;start.disabled=false;start.textContent='Try again';}
 });
 const help=document.getElementById('help'),toggle=document.getElementById('help-toggle');
-function setHelp(open){help.hidden=!open;toggle.setAttribute('aria-expanded',String(open));if(!open)canvas.focus();}
+const handbookFrame=document.getElementById('handbook-frame');
+function setHelp(open){
+  help.hidden=!open;toggle.setAttribute('aria-expanded',String(open));
+  canvas.inert=open;launch.inert=open;document.querySelector('.player-bar').inert=open;
+  if(open){if(!handbookFrame.getAttribute('src'))handbookFrame.src=handbookFrame.dataset.src;document.getElementById('close-help').focus();}
+  else toggle.focus();
+}
+window.addEventListener('message',event=>{
+  if(event.origin!==location.origin||event.source!==handbookFrame.contentWindow||help.hidden)return;
+  if(event.data?.type==='garden-handbook-close')setHelp(false);
+  if(event.data?.type==='garden-handbook-focus-close')document.getElementById('close-help').focus();
+});
+help.addEventListener('keydown',event=>{if(event.key==='Tab'&&event.shiftKey&&document.activeElement.id==='close-help'){event.preventDefault();const nodes=[...handbookFrame.contentDocument.querySelectorAll('a[href],button,input,summary')].filter(n=>n.getClientRects().length&&!n.disabled);nodes.at(-1)?.focus();}});
 toggle.addEventListener('click',()=>setHelp(help.hidden));document.getElementById('close-help').addEventListener('click',()=>setHelp(false));
 document.getElementById('fullscreen').addEventListener('click',()=>{if(!document.fullscreenElement)document.documentElement.requestFullscreen?.();else document.exitFullscreen?.();});
 document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!help.hidden)setHelp(false);});
