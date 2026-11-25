@@ -6,6 +6,7 @@
     bio:pair('我想通过这座庭院，找回被生活搁置的天赋，继续那些曾经未完成、未来仍想做的事。','Through this garden, I want to rediscover talents set aside by everyday life, return to what I left unfinished, and pursue what I still hope to do.'),
     study:pair('学习方向','Study areas'),fashion:pair('服装设计与工程','Fashion design & engineering'),creative:pair('艺术与机器创造','Arts & machine creativity'),
     experience:pair('做过的事','Experience'),evaluation:pair('AI 产品评测','AI product evaluation'),effects:pair('AI 视频特效','AI video effects'),brand:pair('品牌内容','Brand content'),interaction:pair('游戏交互设计','Game interaction design'),visuals:pair('视觉素材制作','Visual asset creation'),godot:pair('Godot 整合','Godot integration'),
+    portfolio:pair('AIGC + UI/UX 作品集','AIGC + UI/UX Portfolio'),
     contact:pair('合作 / 工作联系','For collaborations & work'),
     garden:pair('生活与工作可能让人被异化，逐渐放下、丢弃，甚至遗忘自己最初的天赋。《遗光之庭》从找回这些天赋的愿望出发。','Life and work can alienate us from ourselves, leading us to set aside, abandon or forget our earliest talents. Garden of Afterlight begins with the wish to rediscover them.'),
     role:pair('这座虚拟幻想世界，承载着我想找回的、曾经未完成的，以及未来想继续的事，也是我理想精神世界的缩影。','This imagined world holds what I want to recover, what I once left unfinished, and what I hope to continue in the future. It is a reflection of my ideal inner world.'),
@@ -23,7 +24,7 @@
   if(!['zh','en'].includes(lang))lang='en';
   const word=p=>p[lang], $=id=>document.getElementById(id);
   const inline=new URLSearchParams(location.search).get('inline')==='1';
-  if(inline){document.body.classList.add('about-inline');document.querySelectorAll('a[href]').forEach(a=>{if(!a.getAttribute('href').startsWith('mailto:'))a.target='_top';});}
+  if(inline){document.body.classList.add('about-inline');document.querySelectorAll('a[href]').forEach(a=>{if(!a.getAttribute('href').startsWith('mailto:')&&a.target!=='_blank')a.target='_top';});}
   function renderDetail(){
     const s=stages[active];
     document.querySelectorAll('.workflow-step').forEach((button,i)=>{button.setAttribute('aria-selected',String(i===active));button.tabIndex=i===active?0:-1;});

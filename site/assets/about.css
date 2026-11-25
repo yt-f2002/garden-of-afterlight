@@ -6,3 +6,5 @@
 .creator-band .profile-tags li{border:1px solid #fff9;box-shadow:0 1px 2px #7951710a}.creator-band .tag-school{background:#fff5f7;color:#80506d;border-color:#d6a9c0;font-weight:600;letter-spacing:.04em}
 
 .about-end-divider{border-top:1px solid #e3cfd8;margin-top:14px}
+
+.contact>a.portfolio-link{font:16px/1.6 'Segoe UI','Microsoft YaHei',sans-serif;margin-top:8px;align-self:flex-start}.portfolio-link b{font-weight:400}
