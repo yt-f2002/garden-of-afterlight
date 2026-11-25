@@ -9,7 +9,7 @@
   },
   "source_tree_manifests": {
     "demo": {
-      "sha256": "f9c464dcd644ff0fd7528240101ec9e2a8baf2cd34711fd38da84a161d4f39a8",
+      "sha256": "bd902934de13b29f0521e4eb9bd4b4e18ad6f017231c82f22d717d4ef86bffcd",
       "files": 798
     },
     "explore-3d": {
@@ -345,15 +345,15 @@
     },
     "chapter-4/index.html": {
       "bytes": 2818,
-      "sha256": "f5fc6eca3411ca853f13a46d1dd91bb75f987b8112a2abdd16a2b1950be396f8"
+      "sha256": "0b84948d187bb9e989120b80b7a7318890b4e2ac369380ef5c72e0d83ea4199e"
     },
     "chapter-5/index.html": {
       "bytes": 2817,
-      "sha256": "a81d5bc019b419dc663f98ca0e3fc974e37783ede0793ae03d78c1f38dcfb52c"
+      "sha256": "e7187f8c3d9148dbfeb3de957b38ff6dcf3c6ea57baf6d6889077c3dbc338ba3"
     },
     "chapter-6/index.html": {
       "bytes": 2815,
-      "sha256": "523a1c977422e8db6597a603d44704ff0d2216e0eb15266a6a017ffaf40cfb18"
+      "sha256": "0f2f5eead1518a85c821f2ddd82ad177cb93bc3a2fe2abc588231b1b95870e19"
     },
     "demo/index.audio.position.worklet.js": {
       "bytes": 2973,
@@ -365,7 +365,7 @@
     },
     "demo/index.html": {
       "bytes": 2641,
-      "sha256": "9266803da95844e3c595ba21fb59b27e94f5113281f6b17afbafe407e6ed2ae1"
+      "sha256": "bbd199798dd5202cb9d77498a2feec1354c9618beef4951de548c896f52cdf8b"
     },
     "demo/index.js": {
       "bytes": 279815,
@@ -412,8 +412,8 @@
       "sha256": "54f2dec8f5bd63f8879e536b4ab7f7913d08a681add50ffe55036759e0def7b0"
     },
     "demo/index.pck": {
-      "bytes": 187292620,
-      "sha256": "90964d56f8e11389490a5d5164b07d7e7f0d4b7cab3cadd4d9d41dff5ae86268"
+      "bytes": 187292940,
+      "sha256": "03ff9516e6b09f475ee2f6f66d7c37ceb72edaf77c6f64f187317d41e078de54"
     },
     "explore-3d/index.pck": {
       "bytes": 446019324,

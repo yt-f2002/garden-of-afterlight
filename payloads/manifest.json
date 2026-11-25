@@ -5,18 +5,18 @@
     {
       "output": "site/demo/index.pck",
       "release": "garden-2d-2026-11-25-v2",
-      "bytes": 187292620,
-      "sha256": "90964d56f8e11389490a5d5164b07d7e7f0d4b7cab3cadd4d9d41dff5ae86268",
+      "bytes": 187292940,
+      "sha256": "03ff9516e6b09f475ee2f6f66d7c37ceb72edaf77c6f64f187317d41e078de54",
       "parts": [
         {
           "path": "payloads/demo.pck.part000",
           "bytes": 99614720,
-          "sha256": "9318df33804f01e9ac48fb3c20b97c789ca9f350a69f37e565451700f6f3974c"
+          "sha256": "867d217878c7e7e845fc35c7e4e3b48993b74826aca20b2065300ec68e0969e4"
         },
         {
           "path": "payloads/demo.pck.part001",
-          "bytes": 87677900,
-          "sha256": "4c1c7005a930c69e1e3638ebb79abfcd66f83408eb0febb2909f3984fdd127f2"
+          "bytes": 87678220,
+          "sha256": "d94849704548f49de43610cf1eb88ef80de5f3567f74a1fa686ca86eb838b7e8"
         }
       ]
     },
