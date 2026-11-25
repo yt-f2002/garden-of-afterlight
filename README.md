@@ -44,7 +44,7 @@ The play links work directly in a desktop browser. Changes to gameplay require a
 
 `build-info.json` records the exact engine version, source-project locations, digest of the staged source manifests, web-only adaptations, runtime sizes and hashes. No unrelated repository history is included.
 
-For an update, export the two isolated publishing projects with the matching Godot 4.7.2 single-thread Web templates, preserve the player pages, then regenerate the pack parts and manifest. Replace the runtime files and commit the changed parts together. Actions will reject corrupted or mismatched parts.
+For a game update, export the two isolated publishing projects with the matching Godot 4.7.2 single-thread Web templates, preserve the player pages, then regenerate the pack parts and manifest. Upload the complete parts to a new GitHub Release. Update the release tag in the workflow, the manifest, build metadata and runtime files, then commit them together. The parts stay in Releases rather than Git history. Actions will reject corrupted or mismatched parts.
 
 The static homepage and player presentation can be updated without rebuilding the game packs.
 
