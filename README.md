@@ -34,7 +34,6 @@ The Godot `.pck` files exceed GitHub's normal 100 MiB per-file limit. `payloads/
 Open the file on GitHub, choose **Edit**, make the change and commit it to `main`. GitHub Actions publishes the update at the same online address.
 
 - `site/index.html`: homepage text, navigation and experience cards.
-- `site/credits.html`: project notes.
 - `site/how-to-play.html` and `site/assets/handbook.js`: bilingual chapter and activity guidance.
 - `site/about.html` and `site/assets/about.js`: creator profile, contact and interactive production workflow.
 - `site/assets/handbook.css` and `site/assets/about.css`: handbook and About layouts.
@@ -53,6 +52,6 @@ The static homepage and player presentation can be updated without rebuilding th
 
 ## Credits
 
-Garden of Afterlight is an original game project made with an AI-assisted creative workflow. See the website's project notes for context.
+Garden of Afterlight is an original game project made with an AI-assisted creative workflow.
 
 Runtime: [Godot Engine](https://godotengine.org/), distributed under the [MIT licence](https://godotengine.org/license/).

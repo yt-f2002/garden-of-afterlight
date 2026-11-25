@@ -11,7 +11,7 @@
     role:pair('这座虚拟幻想世界，承载着我想找回的、曾经未完成的，以及未来想继续的事，也是我理想精神世界的缩影。','This imagined world holds what I want to recover, what I once left unfinished, and what I hope to continue in the future. It is a reflection of my ideal inner world.'),
     workflowTitle:pair('制作流程','Production process'),workflowIntro:pair('点击阶段，查看创作分工、工具与产出。','Select a stage to see the decisions, tools and output.'),
     iterate:pair('试玩反馈用于下一轮修改。','Playtest feedback informs the next revision.'),
-    versions:pair('3D 版目前提供第一人称探索，尚未实现独立的 3D 玩法。','The 3D prototype offers first-person exploration; dedicated 3D gameplay is not yet implemented.'),credits:pair('项目说明与致谢','Project notes & credits')
+    versions:pair('3D 版目前提供第一人称探索，尚未实现独立的 3D 玩法。','The 3D prototype offers first-person exploration; dedicated 3D gameplay is not yet implemented.')
   };
   const stages=[
     {title:pair('故事与玩法','Story & gameplay'),hint:pair('定义体验','Define the experience'),subtitle:pair('确定章节目标与操作流程。','Define chapter goals and interaction steps.'),icon:'<path d="M4 5c4-2 7-1 8 0 2-1 5-2 8 0v15c-3-2-6-2-8-1-2-1-5-1-8 1Z M12 5v14"/>',human:pair('设定世界观、章节情绪、角色关系与核心交互；决定哪些想法值得保留。','Define the world, chapter mood, character relationships and core interactions; decide which ideas to keep.'),tools:pair('借助 ChatGPT 整理设计文档、梳理叙事逻辑和操作步骤。','Use ChatGPT to organize design documents, narrative logic and interaction steps.'),output:pair('章节结构、玩法规则，以及下一步需要制作的素材清单。','Chapter structure, gameplay rules and a list of assets to create.')},

@@ -55,10 +55,6 @@
       "bytes": 6441,
       "sha256": "a1534ab50ed1a426f50f6c088e22978520dcda71662d60d27ca957394c710a88"
     },
-    "credits.html": {
-      "bytes": 1897,
-      "sha256": "78ec2da17c91810c79e687ebbc631c2fd2c8dba2fe51c646042de6856326b2a7"
-    },
     "demo/index.audio.position.worklet.js": {
       "bytes": 2973,
       "sha256": "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8"
@@ -120,16 +116,16 @@
       "sha256": "2755ed31000c2b7c05a21a683246c981c0fbec57dda09e6943043a6a5b40e840"
     },
     "about.html": {
-      "bytes": 4852,
-      "sha256": "b4bc8906fc52d21cd993bc88687d68c3f9f62c6d7c4a43b7fe029f0399ff3b03"
+      "bytes": 4778,
+      "sha256": "759f74f3095f8abbbbd6e9571de60060e4986d036e6088ef2bfba12b9a4c4e7f"
     },
     "assets/about.css": {
       "bytes": 8192,
       "sha256": "988e3645503d94f8175ac8268ab77db431685150ebcb9c0eafc8d2067220d8a7"
     },
     "assets/about.js": {
-      "bytes": 10170,
-      "sha256": "69075cb49dc81a04fa8efbc2a056dab037403a471cd99381d3ae30ab0335d27e"
+      "bytes": 10106,
+      "sha256": "178db7db3c7a53ebecf07d9db51e45369214d5ad202f6255a77ebd584b618e75"
     },
     "assets/guide/atelier.webp": {
       "bytes": 308028,
