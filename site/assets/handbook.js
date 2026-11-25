@@ -40,6 +40,14 @@
     $('categories').innerHTML=groups.map(g=>`<a href="#${entries.find(e=>e.group===g.id).id}" ${g.id===current.group?'aria-current="page"':''}>${word(g.label)}</a>`).join('');
     $('chapter-nav').innerHTML=groups.map(g=>`<details class="nav-group" ${g.id===current.group?'open':''}><summary>${word(g.label)}</summary>${entries.filter(e=>e.group===g.id).map(e=>`<a href="#${e.id}" ${e.id===current.id?'aria-current="page"':''}>${e.number?`<span class="chapter-no">${e.number}</span>`:''}${e.number?word(chapterLabels[Number(e.number)-1]):word(e.title)}</a>`).join('')}</details>`).join('');
   }
+  const screenshotPositions={};
+  function screenshotMarkup(){
+    const shots=window.gardenGuideShots?.[current.id];
+    if(!shots?.length)return '';
+    const index=Math.min(screenshotPositions[current.id]||0,shots.length-1),shot=shots[index];
+    const source=`assets/guide/screens/${shot.file}-${lang}.webp`;
+    return `<div class="screenshot-heading"><h2>${lang==='zh'?'操作截图':'Gameplay screenshots'}</h2><span>${lang==='zh'?'实机截图 · 点击图片查看大图':'In-game captures · Open image for full size'}</span></div>${shots.length>1?`<div class="screenshot-steps" aria-label="${lang==='zh'?'截图步骤':'Screenshot steps'}">${shots.map((s,i)=>`<button type="button" data-shot="${i}" aria-pressed="${i===index}" aria-controls="gameplay-figure">${i+1}. ${escape(word(s.title))}</button>`).join('')}</div>`:''}<figure id="gameplay-figure" class="gameplay-figure"><a href="${source}" target="_blank" rel="noopener" aria-label="${escape(word(shot.title))} — ${lang==='zh'?'查看大图（新标签页）':'View full size (new tab)'}"><img src="${source}" alt="${escape(word(shot.title))}: ${escape(word(shot.caption))}" width="1280" height="720"></a><figcaption><strong>${escape(word(shot.title))}</strong><p>${escape(word(shot.caption))}</p></figcaption></figure>`;
+  }
   function render(scroll=false){
     document.documentElement.lang=lang==='zh'?'zh-CN':'en';
     document.title=`${word(current.title)} — Garden of Afterlight`;
@@ -51,7 +59,7 @@
     $('categories').setAttribute('aria-label',lang==='zh'?'教程分类':'Guide categories');
     $('directory').setAttribute('aria-label',lang==='zh'?'手册目录':'Handbook contents');
     navigation();$('crumb').textContent=word(groups.find(g=>g.id===current.group).label);
-    $('article-content').innerHTML=`<h1 class="article-heading">${word(current.title)}</h1><p class="article-deck">${word(current.deck)}</p>${current.image?`<figure class="chapter-art ${current.id==='welcome'?'intro-art':''}"><img src="assets/${current.image}" alt="${escape(word(current.caption))}"><figcaption class="art-caption">${word(current.caption)}</figcaption></figure>`:''}${current.flow?`<div class="flow" aria-label="${lang==='zh'?'操作顺序':'Activity sequence'}">${word(current.flow).map(v=>`<span>${v}</span>`).join('')}</div>`:''}${current.questions.map((item,i)=>`<details class="question" ${i===0?'open':''}><summary>${word(item.title)}</summary><div class="answer">${word(item.body)}</div></details>`).join('')}`;
+    $('article-content').innerHTML=`<h1 class="article-heading">${word(current.title)}</h1><p class="article-deck">${word(current.deck)}</p>${window.gardenGuideShots?.[current.id]?`<section class="gameplay-screens" id="gameplay-screens">${screenshotMarkup()}</section>`:current.image?`<figure class="chapter-art ${current.id==='welcome'?'intro-art':''}"><img src="assets/${current.image}" alt="${escape(word(current.caption))}"><figcaption class="art-caption">${word(current.caption)}</figcaption></figure>`:''}${current.flow?`<div class="flow" aria-label="${lang==='zh'?'操作顺序':'Activity sequence'}">${word(current.flow).map(v=>`<span>${v}</span>`).join('')}</div>`:''}${current.questions.map((item,i)=>`<details class="question" ${i===0?'open':''}><summary>${word(item.title)}</summary><div class="answer">${word(item.body)}</div></details>`).join('')}`;
     const i=entries.indexOf(current);
     $('page-turn').innerHTML=[entries[i-1],entries[i+1]].map((e,j)=>e?`<a href="#${e.id}"><small>${lang==='zh'?(j?'下一页':'上一页'):(j?'Next':'Previous')}</small><span>${word(e.title)}</span></a>`:'<span></span>').join('');
     if(scroll){window.scrollTo({top:0,behavior:'instant'});$('article').focus({preventScroll:true});if(inline)parent.postMessage({type:'garden-guide-top'},location.origin);}
@@ -66,6 +74,13 @@
   }
   window.addEventListener('hashchange',()=>{const next=entries.find(e=>e.id===location.hash.slice(1));if(next){current=next;$('search').value='';closeMenu();render(true);}});
   document.addEventListener('click',event=>{const a=event.target.closest('a[href^="#"]');if(a&&a.hash===location.hash){$('search').value='';closeMenu();render(true);}});
+  $('article-content').addEventListener('click',event=>{
+    const button=event.target.closest('[data-shot]');
+    if(!button)return;
+    screenshotPositions[current.id]=Number(button.dataset.shot);
+    $('gameplay-screens').innerHTML=screenshotMarkup();
+    $('gameplay-screens').querySelector(`[data-shot="${screenshotPositions[current.id]}"]`)?.focus({preventScroll:true});
+  });
   $('search').addEventListener('input',search);
   $('language').addEventListener('click',()=>{lang=lang==='zh'?'en':'zh';try{localStorage.setItem('garden-handbook-language',lang);}catch{}render();});
   $('menu').addEventListener('click',()=>{const open=!document.body.classList.contains('menu-open');document.body.classList.toggle('menu-open',open);$('menu').setAttribute('aria-expanded',String(open));$('veil').hidden=!open;if(open)$('chapter-nav').querySelector('a[aria-current]')?.focus();});

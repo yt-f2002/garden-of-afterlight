@@ -168,24 +168,140 @@
       "sha256": "4a5a1dbb6ea058ca17ced561073cbe90d3b4bb8ba145500f69cf359d85801b8e"
     },
     "assets/handbook.css": {
-      "bytes": 11934,
-      "sha256": "7f0b4288648fc54e72033fb29370799f50f2584a0ab0e069ec1cf5cbcbc68931"
+      "bytes": 13278,
+      "sha256": "99d1b880950889d252eaa0d7d8ecf81ab66fe1f7e658d2a4e125834871572d3a"
     },
     "assets/handbook.js": {
-      "bytes": 26288,
-      "sha256": "3fc42a8bd9db652542ad7ab0db6c51d23875d98f9ffa6a7ab275ca27d6ec6307"
+      "bytes": 28094,
+      "sha256": "d776b247b00eb606fb1fe97c20b24285f14067d115febc7e8192aed9df80d455"
     },
     "assets/player-handbook.css": {
       "bytes": 892,
       "sha256": "dfba5a9d9e005cf47e605210cef78482a01b4da21be9c9492d639e5e233d7f5e"
     },
     "how-to-play.html": {
-      "bytes": 2700,
-      "sha256": "dcf3ed71db6562fd38dcfa9ee27d3aeb823d32e6ef205ea5f3b41805709158d1"
+      "bytes": 2757,
+      "sha256": "33a480e272458615913899e696c15dea3fee584076c4cee05c6437c9b0a1b899"
     },
     "assets/home-guide.js": {
       "bytes": 573,
       "sha256": "7adfabe6555048fd48c8f5ff41950fb468617df2770c7996e77722ac4ca2551e"
+    },
+    "assets/handbook-shots.js": {
+      "bytes": 4229,
+      "sha256": "51a49754f6e83feaff1132419ddf209f22a864f35774e3f040c186c8856e9a08"
+    },
+    "assets/guide/screens/care-en.webp": {
+      "bytes": 288948,
+      "sha256": "c79cd128bae88174ef0886cf8d05f99f3a708304b91711995c224e5d6bbd5d9a"
+    },
+    "assets/guide/screens/care-zh.webp": {
+      "bytes": 289486,
+      "sha256": "a479076e19c60eea948c127fe8be285ec5c88122305fb0b9c406de13f39a160c"
+    },
+    "assets/guide/screens/colour-en.webp": {
+      "bytes": 274384,
+      "sha256": "e3c514c34763ae0bb36cf263694df16aa42983983f254cac38840aa69a033ca3"
+    },
+    "assets/guide/screens/colour-zh.webp": {
+      "bytes": 271864,
+      "sha256": "a8fdbca2eb95d5ebce8019dbbdd1c6957f0f300a01a47ed11457514fa105a670"
+    },
+    "assets/guide/screens/defense-en.webp": {
+      "bytes": 182012,
+      "sha256": "a8a704739ae58670e4ff7a76d66d82f0e6c31e66909309ea7d47d6f3bdf10165"
+    },
+    "assets/guide/screens/defense-zh.webp": {
+      "bytes": 181350,
+      "sha256": "3f7afb758d0553fd09c158d870d584940755d81e94e5445eb12d21ebdc9a48b8"
+    },
+    "assets/guide/screens/fabric-en.webp": {
+      "bytes": 303466,
+      "sha256": "103a4eee8f093020844e472b6fc53538c96a0a28e650aa16574d0bb5974597d4"
+    },
+    "assets/guide/screens/fabric-zh.webp": {
+      "bytes": 300892,
+      "sha256": "dedac84d1449dcfa77558fd8497f06a400b5cde7684d6b1eaf8c9e3195c03a8d"
+    },
+    "assets/guide/screens/garden-growing-en.webp": {
+      "bytes": 324042,
+      "sha256": "7e0927a9638122f5213fadcc5eff6e39de73279a509c85853483b72efa260889"
+    },
+    "assets/guide/screens/garden-growing-zh.webp": {
+      "bytes": 322588,
+      "sha256": "835473a0d2422c049c099b4529c6779238b429776e8ba49c43f47281bd11deaa"
+    },
+    "assets/guide/screens/garden-harvest-en.webp": {
+      "bytes": 327572,
+      "sha256": "821061f65d8566ffd7407ae2b2365cdd924177691f2bbe9a88af41872ccfcde7"
+    },
+    "assets/guide/screens/garden-harvest-zh.webp": {
+      "bytes": 324856,
+      "sha256": "367550f3b80b6d64157458845e454cc2f0321b01e17f7d0a45a6b444b1fd97bd"
+    },
+    "assets/guide/screens/metal-investigation-en.webp": {
+      "bytes": 268212,
+      "sha256": "2d0b89b6aadfeef82a56e4e3d3a5916a68a7e07057840fb0dc9f49f888c03249"
+    },
+    "assets/guide/screens/metal-investigation-zh.webp": {
+      "bytes": 263106,
+      "sha256": "1b618ea33b27283d1e0767e1be67bbd4c7495d8adc98dfbf0a6259b236eba954"
+    },
+    "assets/guide/screens/metal-workshop-en.webp": {
+      "bytes": 245992,
+      "sha256": "228ea445a7e80a043d13d7cbc2cd99a73b128091b727fb7eeb994e0ce30e2fd9"
+    },
+    "assets/guide/screens/metal-workshop-zh.webp": {
+      "bytes": 239130,
+      "sha256": "3038f938aa007869ed9773e39b27578b11b06439c7db376a349a394332043624"
+    },
+    "assets/guide/screens/pattern-en.webp": {
+      "bytes": 290612,
+      "sha256": "0d5283a53b1fedec356b4c7532047192ceb32c33b1213ce95a9f8a7915e73e03"
+    },
+    "assets/guide/screens/pattern-zh.webp": {
+      "bytes": 287912,
+      "sha256": "039ae61ce69616ed08ca9196b6d28236779615399d0742e6648281f34fe54466"
+    },
+    "assets/guide/screens/perfume-en.webp": {
+      "bytes": 250316,
+      "sha256": "7a059698b86a2f3d7531ecf098677623256ff4c27717d9a858409cfebaae5906"
+    },
+    "assets/guide/screens/perfume-zh.webp": {
+      "bytes": 247592,
+      "sha256": "61cb0978f287d5141f014c6417c6c6d9d894c2e7013338a6681899c3e0f79ed4"
+    },
+    "assets/guide/screens/runes-investigation-en.webp": {
+      "bytes": 272356,
+      "sha256": "950ce4e304cef0425bc82ac5cc2e9e5f9d09482fc776dbb487158a2e00f543f1"
+    },
+    "assets/guide/screens/runes-investigation-zh.webp": {
+      "bytes": 267366,
+      "sha256": "ea0ad807f678b9e483f890735e873fa935a736b8587b896ccf65a25da5f15ec2"
+    },
+    "assets/guide/screens/runes-workshop-en.webp": {
+      "bytes": 298338,
+      "sha256": "e971c30e29b8b49679ff01e2f5d75e1660d18f6cd06eb6e27296bd82a4370b3d"
+    },
+    "assets/guide/screens/runes-workshop-zh.webp": {
+      "bytes": 291174,
+      "sha256": "e91f87fb24140605e1278450c2099fb30aa75d696298466cfbbd9cc42cf73eb5"
+    },
+    "assets/guide/screens/stars-investigation-en.webp": {
+      "bytes": 258348,
+      "sha256": "a75649aaee9603eff2f66cdb6eee930f749cac67380cbd64a14d0aa0af1213cc"
+    },
+    "assets/guide/screens/stars-investigation-zh.webp": {
+      "bytes": 249314,
+      "sha256": "a779d78a843344be7fcfb7f7379e677bc418d3b39396be278718b425c7b63e8d"
+    },
+    "assets/guide/screens/stars-workshop-en.webp": {
+      "bytes": 239674,
+      "sha256": "d74b358bb6a290232ad57a91567d92cebbd9dd3a9df7ba5e68ef44df6489427f"
+    },
+    "assets/guide/screens/stars-workshop-zh.webp": {
+      "bytes": 243674,
+      "sha256": "b075bedb842d3ad6ac4be4b9d508c6ec6306ebfbd76c89a9998750908adef296"
     }
   }
 }
