@@ -22,7 +22,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
-        run: gh release download web-demo-2026-11-25 --pattern "*.part*" --dir payloads
+        run: python3 scripts/download_payloads.py
       - name: Restore and verify game packs
         run: python3 scripts/assemble.py
       - name: Upload the site

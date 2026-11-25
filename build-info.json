@@ -9,8 +9,8 @@
   },
   "source_tree_manifests": {
     "demo": {
-      "sha256": "fca5b11963e61ba513049d4a99da9dd3bfdc3d3c4abbdd3c85554de8c3341244",
-      "files": 653
+      "sha256": "f9c464dcd644ff0fd7528240101ec9e2a8baf2cd34711fd38da84a161d4f39a8",
+      "files": 798
     },
     "explore-3d": {
       "sha256": "9c2a8c12b7d140485336dbf3569b04124b72866118d75a93ec33c2960e73e36e",
@@ -18,103 +18,19 @@
     }
   },
   "web_only_changes": [
-    "Explicit single-thread Web export settings; no original project modifications.",
+    "Single-thread Web export settings applied to an isolated copy of the current 2D source.",
     "First browser visit defaults to English; saved language choice remains respected.",
     "Audio uses stream playback to preserve generated sound.",
     "The same recap film was transcoded to 960x540 at 24fps with Vorbis audio; no scene was removed.",
     "The 3D browser entry follows the supplied --walk3d desktop shortcut.",
-    "A browser launch screen exposes download size and controls.",
-    "Bilingual chapter handbook, creator profile and interactive production workflow; game packs unchanged."
+    "Bilingual chapter handbook, creator profile and interactive production workflow; the 3D game pack is unchanged.",
+    "2D browser viewport follows available screen space, and the bilingual chapter guide pauses gameplay."
   ],
   "scope": {
-    "demo": "Existing main-game entry and progression; 2D story interface with a 3D dressmaking workbench.",
+    "demo": "Six connected 2D story chapters, a persistent fragrance garden, tailoring and dye, rune programming puzzles, companion defense and daily rewards, customer orders, material shopping, and chapter showcases.",
     "explore-3d": "First-person exploration only; dedicated 3D gameplay is not implemented."
   },
   "runtime_files": {
-    "assets/atelier.webp": {
-      "bytes": 143540,
-      "sha256": "3c1852bc9f2fe4e6422d6ecdd99ef2dbe72fa363869e23711aaec4dece6be6aa"
-    },
-    "assets/courtyard.webp": {
-      "bytes": 655534,
-      "sha256": "88ded7a675d311d14d97d08a778f2397f56847253073f1be81e3affcce01c01c"
-    },
-    "assets/explore-3d.webp": {
-      "bytes": 120170,
-      "sha256": "26e4604557e139d85a375fe81bd0b2e1914991da27a168475ccf09f89900e0e2"
-    },
-    "assets/garden.svg": {
-      "bytes": 352,
-      "sha256": "10ec2679c13be4248ecca2ab418c0a9cc82af1560c251013cb2c4bc9c3448730"
-    },
-    "assets/player.css": {
-      "bytes": 2834,
-      "sha256": "81804a454babfbee2fb5737f293f013860380004d4b06277d1ef42a5242d7e8c"
-    },
-    "assets/site.css": {
-      "bytes": 6441,
-      "sha256": "a1534ab50ed1a426f50f6c088e22978520dcda71662d60d27ca957394c710a88"
-    },
-    "demo/index.audio.position.worklet.js": {
-      "bytes": 2973,
-      "sha256": "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8"
-    },
-    "demo/index.audio.worklet.js": {
-      "bytes": 7298,
-      "sha256": "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3"
-    },
-    "demo/index.html": {
-      "bytes": 5304,
-      "sha256": "33610a6df7e5a2ddc19e8adba899ca7553c7f001a633bfdc5c275ddc61c238df"
-    },
-    "demo/index.js": {
-      "bytes": 279815,
-      "sha256": "33c94cb3175f3333b82e2a3be5e8e86f77986f0aa2042b1631f6367a4e5bb6ba"
-    },
-    "demo/index.pck": {
-      "bytes": 144678712,
-      "sha256": "c371b633b914026e6402072ea9007abee9b50fee01ba6700f7d109f94bb67851"
-    },
-    "demo/index.png": {
-      "bytes": 21443,
-      "sha256": "3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e"
-    },
-    "demo/index.wasm": {
-      "bytes": 39514754,
-      "sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
-    },
-    "explore-3d/index.audio.position.worklet.js": {
-      "bytes": 2973,
-      "sha256": "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8"
-    },
-    "explore-3d/index.audio.worklet.js": {
-      "bytes": 7298,
-      "sha256": "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3"
-    },
-    "explore-3d/index.html": {
-      "bytes": 4208,
-      "sha256": "b845df6feb74ea39d3523fa72de49322f390855e91772b9c7be3ce491f7d2775"
-    },
-    "explore-3d/index.js": {
-      "bytes": 279815,
-      "sha256": "33c94cb3175f3333b82e2a3be5e8e86f77986f0aa2042b1631f6367a4e5bb6ba"
-    },
-    "explore-3d/index.pck": {
-      "bytes": 446019324,
-      "sha256": "546f3c2456cc7b5c54fd0b5de50319413274e6df64f6b16576e78822d77255ae"
-    },
-    "explore-3d/index.png": {
-      "bytes": 21443,
-      "sha256": "3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e"
-    },
-    "explore-3d/index.wasm": {
-      "bytes": 39514754,
-      "sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
-    },
-    "index.html": {
-      "bytes": 3439,
-      "sha256": "2755ed31000c2b7c05a21a683246c981c0fbec57dda09e6943043a6a5b40e840"
-    },
     "about.html": {
       "bytes": 4475,
       "sha256": "80dd5eb36e32dca6a7ba6e9155004d720fd83aff03de11d4c9f7b80b2215a824"
@@ -126,6 +42,34 @@
     "assets/about.js": {
       "bytes": 9808,
       "sha256": "a46c3770610fee3507044c44fb04239b7a6128105e6bdd2b82ffadc5b524435b"
+    },
+    "assets/atelier.webp": {
+      "bytes": 143540,
+      "sha256": "3c1852bc9f2fe4e6422d6ecdd99ef2dbe72fa363869e23711aaec4dece6be6aa"
+    },
+    "assets/courtyard.webp": {
+      "bytes": 655534,
+      "sha256": "88ded7a675d311d14d97d08a778f2397f56847253073f1be81e3affcce01c01c"
+    },
+    "assets/creator-portrait.webp": {
+      "bytes": 221084,
+      "sha256": "8932ddf2449b33941f739220fdd3dfbf2bf01b0279894588d3c941e2d9579114"
+    },
+    "assets/ending-analytics.js": {
+      "bytes": 1566,
+      "sha256": "128a82251234ba4a7245e3bf9029a1305314a0a7e67df4c7ef9c551f8414dc5e"
+    },
+    "assets/ending-analytics.json": {
+      "bytes": 32,
+      "sha256": "05329d270dd1defc602a63d48f52a994ff973d5538b28b771db97537f64033fe"
+    },
+    "assets/explore-3d.webp": {
+      "bytes": 120170,
+      "sha256": "26e4604557e139d85a375fe81bd0b2e1914991da27a168475ccf09f89900e0e2"
+    },
+    "assets/garden.svg": {
+      "bytes": 352,
+      "sha256": "10ec2679c13be4248ecca2ab418c0a9cc82af1560c251013cb2c4bc9c3448730"
     },
     "assets/guide/atelier.webp": {
       "bytes": 308028,
@@ -163,45 +107,29 @@
       "bytes": 358372,
       "sha256": "4a5a1dbb6ea058ca17ced561073cbe90d3b4bb8ba145500f69cf359d85801b8e"
     },
-    "assets/handbook.css": {
-      "bytes": 13223,
-      "sha256": "0ce5599fe67cc6c4eae568b43105ce9af4f952dc6dea8f1101d603bbbc112404"
+    "assets/guide/screens/backpack-en.webp": {
+      "bytes": 81152,
+      "sha256": "72173c40c9d97046e622885b007226fb2e8a83fd1651194febe9bc4c58a21a68"
     },
-    "assets/handbook.js": {
-      "bytes": 28292,
-      "sha256": "e47f73b1a12b10fcc8d7204f44f7d080cfe1dea2bd15e3136ce36f57a0b438db"
-    },
-    "assets/player-handbook.css": {
-      "bytes": 892,
-      "sha256": "390cc8871704463a6e4d22c3e7573f49b2c6efeb11a0b6c71be53cf262afefad"
-    },
-    "how-to-play.html": {
-      "bytes": 2757,
-      "sha256": "33a480e272458615913899e696c15dea3fee584076c4cee05c6437c9b0a1b899"
-    },
-    "assets/home-guide.js": {
-      "bytes": 1574,
-      "sha256": "d1aa614c796362a60ca1eae77ff11f3d625447b657c850355e15f91632353771"
-    },
-    "assets/handbook-shots.js": {
-      "bytes": 4229,
-      "sha256": "51a49754f6e83feaff1132419ddf209f22a864f35774e3f040c186c8856e9a08"
+    "assets/guide/screens/backpack-zh.webp": {
+      "bytes": 79594,
+      "sha256": "1032c8bdcdb96e2d3b63b9309efed4da42bec4adac77e79e89fbabe01554cc94"
     },
     "assets/guide/screens/care-en.webp": {
-      "bytes": 288948,
-      "sha256": "c79cd128bae88174ef0886cf8d05f99f3a708304b91711995c224e5d6bbd5d9a"
+      "bytes": 239832,
+      "sha256": "2113ba01774b772cf2701b31cc5d12fc0914bc0fd9136932c434b4dfde5fec5d"
     },
     "assets/guide/screens/care-zh.webp": {
-      "bytes": 289486,
-      "sha256": "a479076e19c60eea948c127fe8be285ec5c88122305fb0b9c406de13f39a160c"
+      "bytes": 237232,
+      "sha256": "4ddc675e76907f3947663f4a00997766a5aafc5158fca2be4a9b52ad0e6c92cb"
     },
     "assets/guide/screens/colour-en.webp": {
-      "bytes": 274384,
-      "sha256": "e3c514c34763ae0bb36cf263694df16aa42983983f254cac38840aa69a033ca3"
+      "bytes": 233578,
+      "sha256": "dd431b9e0f4c8a97ae2325db306f203aff72c7a4d7ed6b77f0d608684330d21f"
     },
     "assets/guide/screens/colour-zh.webp": {
-      "bytes": 271864,
-      "sha256": "a8fdbca2eb95d5ebce8019dbbdd1c6957f0f300a01a47ed11457514fa105a670"
+      "bytes": 232144,
+      "sha256": "19f1277ca2c14def6f0b6e5865c600fb953171aa5b72d659ecca000a143532c0"
     },
     "assets/guide/screens/defense-en.webp": {
       "bytes": 182012,
@@ -212,96 +140,307 @@
       "sha256": "3f7afb758d0553fd09c158d870d584940755d81e94e5445eb12d21ebdc9a48b8"
     },
     "assets/guide/screens/fabric-en.webp": {
-      "bytes": 303466,
-      "sha256": "103a4eee8f093020844e472b6fc53538c96a0a28e650aa16574d0bb5974597d4"
+      "bytes": 237706,
+      "sha256": "ee225078d1e5837b5463205be5ff5cac3c9179170242da1a2a002331f34681af"
     },
     "assets/guide/screens/fabric-zh.webp": {
-      "bytes": 300892,
-      "sha256": "dedac84d1449dcfa77558fd8497f06a400b5cde7684d6b1eaf8c9e3195c03a8d"
+      "bytes": 236474,
+      "sha256": "1719c325f9b5714b9a04f454028debe6f9e8f1d7f01cc42aa9d1e4d22fe8725f"
+    },
+    "assets/guide/screens/gallery-card-en.webp": {
+      "bytes": 42562,
+      "sha256": "c27a9458d063c956727666d20ae1e72da9ab79c3379e6eae3bfc2e70ebae28a3"
+    },
+    "assets/guide/screens/gallery-card-zh.webp": {
+      "bytes": 41754,
+      "sha256": "8733a8aa3ff2a959faf01069dab80818903b7c52bf7aad7162eace1ae9d1d8ba"
+    },
+    "assets/guide/screens/gallery-editor-en.webp": {
+      "bytes": 213856,
+      "sha256": "685c7bd465b499339c7477b264aeca2db8b21d87eca9622cad1637ac104ea076"
+    },
+    "assets/guide/screens/gallery-editor-zh.webp": {
+      "bytes": 210082,
+      "sha256": "7796200b03c6e3bad215d56be80f364f3cfce61ed05cb2ada0562e70ae64be5e"
+    },
+    "assets/guide/screens/gallery-en.webp": {
+      "bytes": 246300,
+      "sha256": "b8c1eba021c1370c7169f577c2bf4831fca687b63ae81c282c5622e952ec40ef"
+    },
+    "assets/guide/screens/gallery-zh.webp": {
+      "bytes": 245070,
+      "sha256": "6fe1f14e1ae8b907c59a42d60af465c0729f7434256c76b02ec184db3452cba6"
+    },
+    "assets/guide/screens/garden-after-en.webp": {
+      "bytes": 333458,
+      "sha256": "e1a8c0285bd068d40d3323d654b950c064adc7d4dc81dafda86be62207f38a67"
+    },
+    "assets/guide/screens/garden-after-zh.webp": {
+      "bytes": 331720,
+      "sha256": "3ea8e50295e3e08ffb5ee5a3dc9048675591a186daddb9b3d541be47510cda3d"
     },
     "assets/guide/screens/garden-growing-en.webp": {
-      "bytes": 324042,
-      "sha256": "7e0927a9638122f5213fadcc5eff6e39de73279a509c85853483b72efa260889"
+      "bytes": 333916,
+      "sha256": "1d4669222ddefc7d6113d5d690f26b995bd59336374e5761f35f67f1bf4d3b92"
     },
     "assets/guide/screens/garden-growing-zh.webp": {
-      "bytes": 322588,
-      "sha256": "835473a0d2422c049c099b4529c6779238b429776e8ba49c43f47281bd11deaa"
+      "bytes": 334628,
+      "sha256": "07826461bd5f29bdb86032a3f16f2da548c68b24c05d90fa0353117c3559ab1c"
     },
     "assets/guide/screens/garden-harvest-en.webp": {
-      "bytes": 327572,
-      "sha256": "821061f65d8566ffd7407ae2b2365cdd924177691f2bbe9a88af41872ccfcde7"
+      "bytes": 358534,
+      "sha256": "4bb7eb284840928069e13e7215b7db4e36c4c782aac8e4941cd53b13b29f391a"
     },
     "assets/guide/screens/garden-harvest-zh.webp": {
-      "bytes": 324856,
-      "sha256": "367550f3b80b6d64157458845e454cc2f0321b01e17f7d0a45a6b444b1fd97bd"
+      "bytes": 357044,
+      "sha256": "385897ea7ae185ed50453a9a02cdcefe5f8c2b6fa94747b214df5fb7f5acd635"
+    },
+    "assets/guide/screens/home-en.webp": {
+      "bytes": 381990,
+      "sha256": "ef06a0edcc6af39d59b13d238ea51317e34ad80af34a7b219f22513118975157"
+    },
+    "assets/guide/screens/home-zh.webp": {
+      "bytes": 380720,
+      "sha256": "6d97ab383680aa3127f31b7091a2338a8de6892e0e807d8312c4becd85c4d7e7"
+    },
+    "assets/guide/screens/metal-complete-en.webp": {
+      "bytes": 223956,
+      "sha256": "e55c54d0aa2d72ea287bc6232eb231b37ae916a0ba9443b8a75e498bceaaf2d1"
+    },
+    "assets/guide/screens/metal-complete-zh.webp": {
+      "bytes": 222428,
+      "sha256": "01e756da28e3a3110f87dd35dc281b581cb4b496dc244b1ced0190a7b4cff53b"
     },
     "assets/guide/screens/metal-investigation-en.webp": {
-      "bytes": 268212,
-      "sha256": "2d0b89b6aadfeef82a56e4e3d3a5916a68a7e07057840fb0dc9f49f888c03249"
+      "bytes": 223922,
+      "sha256": "7a9721265edb85d63fc6d8502b3e8069e6965a5699aa724cd18844838727bea3"
     },
     "assets/guide/screens/metal-investigation-zh.webp": {
-      "bytes": 263106,
-      "sha256": "1b618ea33b27283d1e0767e1be67bbd4c7495d8adc98dfbf0a6259b236eba954"
+      "bytes": 220194,
+      "sha256": "aa1b56477e9aca2557fd6acbf4634a5415057ec1e911d0afbcf542b78257595d"
     },
     "assets/guide/screens/metal-workshop-en.webp": {
-      "bytes": 245992,
-      "sha256": "228ea445a7e80a043d13d7cbc2cd99a73b128091b727fb7eeb994e0ce30e2fd9"
+      "bytes": 203976,
+      "sha256": "9caab98185c17437b6b6221b9c9c97dcfeddd161d3621bea1ef5d164608cb96f"
     },
     "assets/guide/screens/metal-workshop-zh.webp": {
-      "bytes": 239130,
-      "sha256": "3038f938aa007869ed9773e39b27578b11b06439c7db376a349a394332043624"
+      "bytes": 201472,
+      "sha256": "7044c36a15ee3c8751bb06e94bebe21b93788b3366fac0a9425d0266f3cbc4b6"
     },
     "assets/guide/screens/pattern-en.webp": {
-      "bytes": 290612,
-      "sha256": "0d5283a53b1fedec356b4c7532047192ceb32c33b1213ce95a9f8a7915e73e03"
+      "bytes": 263156,
+      "sha256": "bde369a4447749818d1c92569225955f6367db970b57bac7ec4fa195f05c92f4"
     },
     "assets/guide/screens/pattern-zh.webp": {
-      "bytes": 287912,
-      "sha256": "039ae61ce69616ed08ca9196b6d28236779615399d0742e6648281f34fe54466"
+      "bytes": 264306,
+      "sha256": "b1351bb238bc81aabf69f09ffeb315a0c8bc4f33902c98283798b0cb20a656e0"
     },
     "assets/guide/screens/perfume-en.webp": {
-      "bytes": 250316,
-      "sha256": "7a059698b86a2f3d7531ecf098677623256ff4c27717d9a858409cfebaae5906"
+      "bytes": 211850,
+      "sha256": "368c7bb566bed14a7bb4329945aa628184d41f257fc53adec9bd2d92f8df50bc"
+    },
+    "assets/guide/screens/perfume-product-en.webp": {
+      "bytes": 217382,
+      "sha256": "6eb1543e53702e38b2fbe25925c4fbd5edb8226e2c129c8a1c151072b4892bdb"
+    },
+    "assets/guide/screens/perfume-product-zh.webp": {
+      "bytes": 215076,
+      "sha256": "d608924886b5c67f221379e0189342ae92bc193ed5aac2890ab1a811976ce645"
+    },
+    "assets/guide/screens/perfume-shake-en.webp": {
+      "bytes": 212394,
+      "sha256": "58b39493f8598aa315ae431708c3cb0c04cee454edb8defb7e2f76e4cb2c5636"
+    },
+    "assets/guide/screens/perfume-shake-zh.webp": {
+      "bytes": 208274,
+      "sha256": "8d0535dd4dbcc8281fb333d0b8d81333d6ac1650d183c7111ecf4b71ef1b5a46"
     },
     "assets/guide/screens/perfume-zh.webp": {
-      "bytes": 247592,
-      "sha256": "61cb0978f287d5141f014c6417c6c6d9d894c2e7013338a6681899c3e0f79ed4"
+      "bytes": 208512,
+      "sha256": "f1e8b3f38eacedde71f81c5cfa64b3001c85979c2bb5cda554149843266e2d62"
     },
     "assets/guide/screens/runes-investigation-en.webp": {
-      "bytes": 272356,
-      "sha256": "950ce4e304cef0425bc82ac5cc2e9e5f9d09482fc776dbb487158a2e00f543f1"
+      "bytes": 227082,
+      "sha256": "54edb29a3263211932f8fc32b3a22c04c284d57c6ed6969402fbc1dc656525f9"
     },
     "assets/guide/screens/runes-investigation-zh.webp": {
-      "bytes": 267366,
-      "sha256": "ea0ad807f678b9e483f890735e873fa935a736b8587b896ccf65a25da5f15ec2"
+      "bytes": 224026,
+      "sha256": "03b790cb60886f674ad63a488d6b34d3650158127004fc8902f189e650b1529f"
     },
     "assets/guide/screens/runes-workshop-en.webp": {
-      "bytes": 298338,
-      "sha256": "e971c30e29b8b49679ff01e2f5d75e1660d18f6cd06eb6e27296bd82a4370b3d"
+      "bytes": 240070,
+      "sha256": "e7d53947ac27aa0913c898c15e2ae1700ca3861ca3d301ac0dd050e63f66dcee"
     },
     "assets/guide/screens/runes-workshop-zh.webp": {
-      "bytes": 291174,
-      "sha256": "e91f87fb24140605e1278450c2099fb30aa75d696298466cfbbd9cc42cf73eb5"
+      "bytes": 235784,
+      "sha256": "df32cfb4667c31ab9762750b5a4937f661493f8fc44a0b3cf779f55a02964a9b"
+    },
+    "assets/guide/screens/shop-confirm-en.webp": {
+      "bytes": 193116,
+      "sha256": "28940cb969fdcfbe9dc8cd09b5d5af672568daa07caa2a9edd03a728170e8c7a"
+    },
+    "assets/guide/screens/shop-confirm-zh.webp": {
+      "bytes": 193794,
+      "sha256": "4415c31924254ab3ad07d9625891e1f7cbd4b702a7c01016b4f65f78f652eb75"
+    },
+    "assets/guide/screens/shop-en.webp": {
+      "bytes": 197062,
+      "sha256": "24715a45519ee937853ef296d6c9e90dacc831db9f99142b1e022d8b45c5ca21"
+    },
+    "assets/guide/screens/shop-zh.webp": {
+      "bytes": 197154,
+      "sha256": "63b32d214665a3165922c34b46e01a69b8d32c9e483ce525954a250c587b2de6"
     },
     "assets/guide/screens/stars-investigation-en.webp": {
-      "bytes": 258348,
-      "sha256": "a75649aaee9603eff2f66cdb6eee930f749cac67380cbd64a14d0aa0af1213cc"
+      "bytes": 211752,
+      "sha256": "70b5a922ad658aa9a8db1c906274553762aa36cbe7317ef371423e511af4bc98"
     },
     "assets/guide/screens/stars-investigation-zh.webp": {
-      "bytes": 249314,
-      "sha256": "a779d78a843344be7fcfb7f7379e677bc418d3b39396be278718b425c7b63e8d"
+      "bytes": 207918,
+      "sha256": "bd75c72dc4062503dee803a30fa23aa7c0c2df24e1ea2c36dea0acafb23c7ab2"
     },
     "assets/guide/screens/stars-workshop-en.webp": {
-      "bytes": 239674,
-      "sha256": "d74b358bb6a290232ad57a91567d92cebbd9dd3a9df7ba5e68ef44df6489427f"
+      "bytes": 188564,
+      "sha256": "7c0dd3735070c966e601e461d15c440e21d5c735275e9c1d836e1240345bb44f"
     },
     "assets/guide/screens/stars-workshop-zh.webp": {
-      "bytes": 243674,
-      "sha256": "b075bedb842d3ad6ac4be4b9d508c6ec6306ebfbd76c89a9998750908adef296"
+      "bytes": 185892,
+      "sha256": "fcd7a4245da7d7163275ae28c425767cbe0b7733ccb544dfc433083a44ece439"
     },
-    "assets/creator-portrait.webp": {
-      "bytes": 221084,
-      "sha256": "8932ddf2449b33941f739220fdd3dfbf2bf01b0279894588d3c941e2d9579114"
+    "assets/handbook-shots.js": {
+      "bytes": 8336,
+      "sha256": "c5c1bf227fa600fc399872bcf3613d66f4f46ec1d4013542dd6eea10c0dd8ad4"
+    },
+    "assets/handbook.css": {
+      "bytes": 13223,
+      "sha256": "0ce5599fe67cc6c4eae568b43105ce9af4f952dc6dea8f1101d603bbbc112404"
+    },
+    "assets/handbook.js": {
+      "bytes": 36319,
+      "sha256": "12e114f0ed001351a961c1c7ce069acfafd086be488fa29e48885036ddb30316"
+    },
+    "assets/home-guide.js": {
+      "bytes": 1574,
+      "sha256": "d1aa614c796362a60ca1eae77ff11f3d625447b657c850355e15f91632353771"
+    },
+    "assets/player-handbook.css": {
+      "bytes": 892,
+      "sha256": "390cc8871704463a6e4d22c3e7573f49b2c6efeb11a0b6c71be53cf262afefad"
+    },
+    "assets/player-v2.css": {
+      "bytes": 4996,
+      "sha256": "d5b386de756936a66a7ac0d6846cea9139fed45a65bab4193dd4a5c8bf7a72ad"
+    },
+    "assets/player-v2.js": {
+      "bytes": 4589,
+      "sha256": "407f47668c4fa4bc0b4ff5e0fe0fe20fa0efe017b3f8e628983a023343a0b680"
+    },
+    "assets/player.css": {
+      "bytes": 2834,
+      "sha256": "81804a454babfbee2fb5737f293f013860380004d4b06277d1ef42a5242d7e8c"
+    },
+    "assets/site.css": {
+      "bytes": 7182,
+      "sha256": "f3cc6cb67c5c5235d60d5959e463fda70aea4bdeb2ef4fa10672d6f63b9883ba"
+    },
+    "chapter-4/index.html": {
+      "bytes": 2818,
+      "sha256": "f5fc6eca3411ca853f13a46d1dd91bb75f987b8112a2abdd16a2b1950be396f8"
+    },
+    "chapter-5/index.html": {
+      "bytes": 2817,
+      "sha256": "a81d5bc019b419dc663f98ca0e3fc974e37783ede0793ae03d78c1f38dcfb52c"
+    },
+    "chapter-6/index.html": {
+      "bytes": 2815,
+      "sha256": "523a1c977422e8db6597a603d44704ff0d2216e0eb15266a6a017ffaf40cfb18"
+    },
+    "demo/index.audio.position.worklet.js": {
+      "bytes": 2973,
+      "sha256": "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8"
+    },
+    "demo/index.audio.worklet.js": {
+      "bytes": 7298,
+      "sha256": "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3"
+    },
+    "demo/index.html": {
+      "bytes": 2641,
+      "sha256": "9266803da95844e3c595ba21fb59b27e94f5113281f6b17afbafe407e6ed2ae1"
+    },
+    "demo/index.js": {
+      "bytes": 279815,
+      "sha256": "33c94cb3175f3333b82e2a3be5e8e86f77986f0aa2042b1631f6367a4e5bb6ba"
+    },
+    "demo/index.png": {
+      "bytes": 21443,
+      "sha256": "3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e"
+    },
+    "demo/index.wasm": {
+      "bytes": 39514754,
+      "sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
+    },
+    "explore-3d/index.audio.position.worklet.js": {
+      "bytes": 2973,
+      "sha256": "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8"
+    },
+    "explore-3d/index.audio.worklet.js": {
+      "bytes": 7298,
+      "sha256": "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3"
+    },
+    "explore-3d/index.html": {
+      "bytes": 4208,
+      "sha256": "b845df6feb74ea39d3523fa72de49322f390855e91772b9c7be3ce491f7d2775"
+    },
+    "explore-3d/index.js": {
+      "bytes": 279815,
+      "sha256": "33c94cb3175f3333b82e2a3be5e8e86f77986f0aa2042b1631f6367a4e5bb6ba"
+    },
+    "explore-3d/index.png": {
+      "bytes": 21443,
+      "sha256": "3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e"
+    },
+    "explore-3d/index.wasm": {
+      "bytes": 39514754,
+      "sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
+    },
+    "how-to-play.html": {
+      "bytes": 2757,
+      "sha256": "33a480e272458615913899e696c15dea3fee584076c4cee05c6437c9b0a1b899"
+    },
+    "index.html": {
+      "bytes": 4327,
+      "sha256": "54f2dec8f5bd63f8879e536b4ab7f7913d08a681add50ffe55036759e0def7b0"
+    },
+    "demo/index.pck": {
+      "bytes": 187292620,
+      "sha256": "90964d56f8e11389490a5d5164b07d7e7f0d4b7cab3cadd4d9d41dff5ae86268"
+    },
+    "explore-3d/index.pck": {
+      "bytes": 446019324,
+      "sha256": "546f3c2456cc7b5c54fd0b5de50319413274e6df64f6b16576e78822d77255ae"
     }
-  }
+  },
+  "demo_release": "garden-2d-2026-11-25-v2",
+  "chapter_trials": {
+    "4": {
+      "entry": "chapter-4/",
+      "save": "chapter_4_trial_profile.json",
+      "shared_runtime": "demo/"
+    },
+    "5": {
+      "entry": "chapter-5/",
+      "save": "chapter_5_trial_profile.json",
+      "shared_runtime": "demo/"
+    },
+    "6": {
+      "entry": "chapter-6/",
+      "save": "chapter_6_trial_profile.json",
+      "shared_runtime": "demo/"
+    }
+  },
+  "included_resources": [
+    "Bundled Noto CJK and Symbols fonts with OFL licences",
+    "Authored .bytes character animations",
+    "Original generated chapter and circular-action artwork"
+  ]
 }

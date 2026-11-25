@@ -1,38 +1,10 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The Blank Signature — Garden of Afterlight</title><link rel="stylesheet" href="../assets/player.css"><link rel="stylesheet" href="../assets/player-handbook.css"><link rel="icon" href="../assets/garden.svg" type="image/svg+xml"></head>
-<body><header class="player-bar"><a href="../">Garden of Afterlight</a><span>Story & dressmaking demo</span><div><button id="help-toggle" aria-expanded="false" aria-controls="help" aria-haspopup="dialog">How to play</button><button id="fullscreen">Fullscreen</button></div></header>
-<main id="stage"><canvas id="canvas" width="1600" height="900" tabindex="0" aria-label="The Blank Signature game"></canvas><section id="launch" class="launch"><div class="launch-content"><a class="back" href="../">Back to the garden</a><p class="kind">Story & dressmaking demo</p><h1>The Blank Signature</h1><p class="description">Follow the story into the old atelier, recover materials and make a garment bearing your own signature.</p><p class="controls">Click to explore and choose dialogue. Drag to adjust patterns, cut and sew. Hold the final needle to sign your work.</p><button id="start">Start the demo</button><progress id="progress" max="100" value="0" hidden aria-label="Game download progress"></progress><p id="status" aria-live="polite">First visit downloads about 184 MB. Please keep this tab open.</p></div></section><aside id="help" role="dialog" aria-modal="true" aria-labelledby="help-title" hidden><div class="handbook-bar"><h2 id="help-title">How to play · 玩法指南</h2><button id="close-help" type="button">Return to game / 返回游戏 <span aria-hidden="true">×</span></button></div><iframe id="handbook-frame" title="Garden of Afterlight bilingual handbook" data-src="../how-to-play.html?embedded=1"></iframe></aside></main>
-<script src="index.js"></script><script>
-const GODOT_CONFIG={"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":144678712,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
-GODOT_CONFIG.canvasResizePolicy=0;
-GODOT_CONFIG.canvas=document.getElementById('canvas');
-GODOT_CONFIG.ensureCrossOriginIsolationHeaders=false;
-const engine=new Engine(GODOT_CONFIG);
-window.gardenEngine=engine;
-const start=document.getElementById('start'), status=document.getElementById('status'), progress=document.getElementById('progress'), launch=document.getElementById('launch'), canvas=document.getElementById('canvas');
-canvas.addEventListener('contextmenu',event=>event.preventDefault());
-start.addEventListener('click',async()=>{
-  const missing=Engine.getMissingFeatures({threads:false});
-  if(missing.length){status.textContent='This browser is missing: '+missing.join(', ')+'. Try the latest Chrome or Edge.';return;}
-  start.disabled=true;start.textContent='Loading the garden…';progress.hidden=false;status.textContent='Downloading the artwork and game. The first load takes a moment.';
-  try {await engine.startGame({onProgress:(current,total)=>{if(total>0){progress.value=current/total*100;status.textContent='Loading '+Math.round(current/1000000)+' / '+Math.round(total/1000000)+' MB';}},onPrint:(...args)=>console.log(...args),onPrintError:(...args)=>console.error(...args)});launch.hidden=true;window.gardenStarted=true;canvas.focus();}
-  catch(error){console.error(error);status.textContent='The game could not start. Reload this page and try Chrome or Edge. '+error.message;start.disabled=false;start.textContent='Try again';}
-});
-const help=document.getElementById('help'),toggle=document.getElementById('help-toggle');
-const handbookFrame=document.getElementById('handbook-frame');
-function setHelp(open){
-  help.hidden=!open;toggle.setAttribute('aria-expanded',String(open));
-  canvas.inert=open;launch.inert=open;document.querySelector('.player-bar').inert=open;
-  if(open){if(!handbookFrame.getAttribute('src'))handbookFrame.src=handbookFrame.dataset.src;document.getElementById('close-help').focus();}
-  else toggle.focus();
-}
-window.addEventListener('message',event=>{
-  if(event.origin!==location.origin||event.source!==handbookFrame.contentWindow||help.hidden)return;
-  if(event.data?.type==='garden-handbook-close')setHelp(false);
-  if(event.data?.type==='garden-handbook-focus-close')document.getElementById('close-help').focus();
-});
-help.addEventListener('keydown',event=>{if(event.key==='Tab'&&event.shiftKey&&document.activeElement.id==='close-help'){event.preventDefault();const nodes=[...handbookFrame.contentDocument.querySelectorAll('a[href],button,input,summary')].filter(n=>n.getClientRects().length&&!n.disabled);nodes.at(-1)?.focus();}});
-toggle.addEventListener('click',()=>setHelp(help.hidden));document.getElementById('close-help').addEventListener('click',()=>setHelp(false));
-document.getElementById('fullscreen').addEventListener('click',()=>{if(!document.fullscreenElement)document.documentElement.requestFullscreen?.();else document.exitFullscreen?.();});
-document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!help.hidden)setHelp(false);});
-</script></body></html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Garden of Afterlight — Play</title><link rel="stylesheet" href="../assets/player-v2.css"><link rel="icon" href="../assets/garden.svg" type="image/svg+xml"></head>
+<body>
+<header class="player-bar"><a href="../">Garden of Afterlight</a><span>Story &amp; crafts</span><nav aria-label="Player controls"><button id="help-toggle" aria-controls="help" aria-expanded="false">How to play</button><button id="fullscreen">Fullscreen</button><button id="hide-bar" title="Hide the toolbar to give the game more room">Hide bar</button></nav></header>
+<button id="show-bar" hidden aria-label="Show player toolbar">Menu</button>
+<main id="stage"><canvas id="canvas" width="1600" height="900" tabindex="0" aria-label="Garden of Afterlight game"></canvas>
+<section id="launch" class="launch"><div class="launch-content"><a class="back" href="../">Back to the garden</a><p class="kind">An illustrated world to explore</p><h1>Garden of<br>Afterlight</h1><p class="description">Follow six stories, meet your companions and make something of your own.</p><p class="controls">Click to explore and choose dialogue. Follow the golden highlights. Open the chapter guide whenever you need a hand.</p><button id="start">Enter the garden</button><progress id="progress" max="100" value="0" hidden aria-label="Game download progress"></progress><p id="status" aria-live="polite">First visit downloads about 227 MB. Please keep this tab open.</p><button id="launch-guide" class="text-button">Read the chapter guide first</button><p class="device-note">Best with a keyboard and mouse. Chinese and English are available inside the game.</p></div></section></main>
+<section id="help" hidden role="dialog" aria-modal="true" aria-labelledby="help-title"><div class="manual"><header class="manual-head"><h2 id="help-title">How to play · 玩法指南</h2><button id="close-help">Return to game / 返回游戏</button></header><iframe id="handbook-frame" title="Garden of Afterlight bilingual chapter handbook" data-src="../how-to-play.html?embedded=1"></iframe></div></section>
+<script src="index.js"></script><script>window.GARDEN_CONFIG={"args":[],"canvasResizePolicy":0,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":187292620,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};</script><script src="../assets/ending-analytics.js"></script><script src="../assets/player-v2.js"></script>
+</body></html>
