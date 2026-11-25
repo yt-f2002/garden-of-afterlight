@@ -1,0 +1,7 @@
+site/**/*.pck
+site/**/*.assembling
+__pycache__/
+*.log
+.DS_Store
+Thumbs.db
+payloads/*.part*

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The Blank Signature — Garden of Afterlight</title><link rel="stylesheet" href="../assets/player.css"><link rel="icon" href="../assets/garden.svg" type="image/svg+xml"></head>
+<body><header class="player-bar"><a href="../">Garden of Afterlight</a><span>Story & dressmaking demo</span><div><button id="help-toggle" aria-expanded="false" aria-controls="help">Controls</button><button id="fullscreen">Fullscreen</button></div></header>
+<main id="stage"><canvas id="canvas" width="1600" height="900" tabindex="0" aria-label="The Blank Signature game"></canvas><section id="launch" class="launch"><div class="launch-content"><a class="back" href="../">Back to the garden</a><p class="kind">Story & dressmaking demo</p><h1>The Blank Signature</h1><p class="description">Follow the story into the old atelier, recover materials and make a garment bearing your own signature.</p><p class="controls">Click to explore and choose dialogue. Drag to adjust patterns, cut and sew. Hold the final needle to sign your work.</p><button id="start">Start the demo</button><progress id="progress" max="100" value="0" hidden aria-label="Game download progress"></progress><p id="status" aria-live="polite">First visit downloads about 184 MB. Please keep this tab open.</p></div></section><aside id="help" hidden><h2>How to play</h2><p>Click to explore and choose dialogue. Drag to adjust patterns, cut and sew. Hold the final needle to sign your work.</p><p>English and Chinese can be selected inside the game. Saved progress stays in this browser.</p><button id="close-help">Return to game</button></aside></main>
+<script src="index.js"></script><script>
+const GODOT_CONFIG={"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":144678712,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+GODOT_CONFIG.canvasResizePolicy=0;
+GODOT_CONFIG.canvas=document.getElementById('canvas');
+GODOT_CONFIG.ensureCrossOriginIsolationHeaders=false;
+const engine=new Engine(GODOT_CONFIG);
+window.gardenEngine=engine;
+const start=document.getElementById('start'), status=document.getElementById('status'), progress=document.getElementById('progress'), launch=document.getElementById('launch'), canvas=document.getElementById('canvas');
+canvas.addEventListener('contextmenu',event=>event.preventDefault());
+start.addEventListener('click',async()=>{
+  const missing=Engine.getMissingFeatures({threads:false});
+  if(missing.length){status.textContent='This browser is missing: '+missing.join(', ')+'. Try the latest Chrome or Edge.';return;}
+  start.disabled=true;start.textContent='Loading the garden…';progress.hidden=false;status.textContent='Downloading the artwork and game. The first load takes a moment.';
+  try {await engine.startGame({onProgress:(current,total)=>{if(total>0){progress.value=current/total*100;status.textContent='Loading '+Math.round(current/1000000)+' / '+Math.round(total/1000000)+' MB';}},onPrint:(...args)=>console.log(...args),onPrintError:(...args)=>console.error(...args)});launch.hidden=true;window.gardenStarted=true;canvas.focus();}
+  catch(error){console.error(error);status.textContent='The game could not start. Reload this page and try Chrome or Edge. '+error.message;start.disabled=false;start.textContent='Try again';}
+});
+const help=document.getElementById('help'),toggle=document.getElementById('help-toggle');
+function setHelp(open){help.hidden=!open;toggle.setAttribute('aria-expanded',String(open));if(!open)canvas.focus();}
+toggle.addEventListener('click',()=>setHelp(help.hidden));document.getElementById('close-help').addEventListener('click',()=>setHelp(false));
+document.getElementById('fullscreen').addEventListener('click',()=>{if(!document.fullscreenElement)document.documentElement.requestFullscreen?.();else document.exitFullscreen?.();});
+document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!help.hidden)setHelp(false);});
+</script></body></html>

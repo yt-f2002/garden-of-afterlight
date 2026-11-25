@@ -1,0 +1,55 @@
+{
+  "schema": 1,
+  "chunk_bytes": 99614720,
+  "files": [
+    {
+      "output": "site/demo/index.pck",
+      "bytes": 144678712,
+      "sha256": "c371b633b914026e6402072ea9007abee9b50fee01ba6700f7d109f94bb67851",
+      "parts": [
+        {
+          "path": "payloads/demo.pck.part000",
+          "bytes": 99614720,
+          "sha256": "0bfa040a4d9ef8abd4a29edcd7234bc82be13ee230feec3669aa3490272a9e6d"
+        },
+        {
+          "path": "payloads/demo.pck.part001",
+          "bytes": 45063992,
+          "sha256": "dcb037846c05ab819fbf785b382e6ba0b99260132ab6217dac554007a79a3dd5"
+        }
+      ]
+    },
+    {
+      "output": "site/explore-3d/index.pck",
+      "bytes": 446019324,
+      "sha256": "546f3c2456cc7b5c54fd0b5de50319413274e6df64f6b16576e78822d77255ae",
+      "parts": [
+        {
+          "path": "payloads/explore-3d.pck.part000",
+          "bytes": 99614720,
+          "sha256": "8087937717d9169cae698c5ab7f5e349a726f5d1e4389a42f7a67b0dd413bda5"
+        },
+        {
+          "path": "payloads/explore-3d.pck.part001",
+          "bytes": 99614720,
+          "sha256": "54d4f1feea297a3d2b9d3142ae2e139276da5a7824c3bfdc92613b5d946adf74"
+        },
+        {
+          "path": "payloads/explore-3d.pck.part002",
+          "bytes": 99614720,
+          "sha256": "7ce181aee368d59535233c72a90615cb1ad8edb5ece7bc8ffd8484a238f49f98"
+        },
+        {
+          "path": "payloads/explore-3d.pck.part003",
+          "bytes": 99614720,
+          "sha256": "3710f097c73bc9f83db67f24272788014d6d4670c5b43065e4e3bf089bd2e652"
+        },
+        {
+          "path": "payloads/explore-3d.pck.part004",
+          "bytes": 47560444,
+          "sha256": "06f476651a6e185dacfe1ed4a7f83d3ff6c985f8f83a64ecebc483d98a42d683"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "project": "Garden of Afterlight",
+  "engine": "4.7.2.stable.official.ed1daf0bf",
+  "build_date": "2026-11-25",
+  "platform": "Web: single thread, Compatibility / WebGL 2.0, no GDExtensions",
+  "source_projects": {
+    "demo": "production/chapter03/Godot",
+    "explore-3d": "production/Garden3D"
+  },
+  "source_tree_manifests": {
+    "demo": {
+      "sha256": "fca5b11963e61ba513049d4a99da9dd3bfdc3d3c4abbdd3c85554de8c3341244",
+      "files": 653
+    },
+    "explore-3d": {
+      "sha256": "9c2a8c12b7d140485336dbf3569b04124b72866118d75a93ec33c2960e73e36e",
+      "files": 990
+    }
+  },
+  "web_only_changes": [
+    "Explicit single-thread Web export settings; no original project modifications.",
+    "First browser visit defaults to English; saved language choice remains respected.",
+    "Audio uses stream playback to preserve generated sound.",
+    "The same recap film was transcoded to 960x540 at 24fps with Vorbis audio; no scene was removed.",
+    "The 3D browser entry follows the supplied --walk3d desktop shortcut.",
+    "A browser launch screen exposes download size and controls."
+  ],
+  "scope": {
+    "demo": "Existing main-game entry and progression; 2D story interface with a 3D dressmaking workbench.",
+    "explore-3d": "First-person exploration only; dedicated 3D gameplay is not implemented."
+  },
+  "runtime_files": {
+    "assets/atelier.webp": {
+      "bytes": 143540,
+      "sha256": "3c1852bc9f2fe4e6422d6ecdd99ef2dbe72fa363869e23711aaec4dece6be6aa"
+    },
+    "assets/courtyard.webp": {
+      "bytes": 655534,
+      "sha256": "88ded7a675d311d14d97d08a778f2397f56847253073f1be81e3affcce01c01c"
+    },
+    "assets/explore-3d.webp": {
+      "bytes": 120170,
+      "sha256": "26e4604557e139d85a375fe81bd0b2e1914991da27a168475ccf09f89900e0e2"
+    },
+    "assets/garden.svg": {
+      "bytes": 352,
+      "sha256": "10ec2679c13be4248ecca2ab418c0a9cc82af1560c251013cb2c4bc9c3448730"
+    },
+    "assets/player.css": {
+      "bytes": 2834,
+      "sha256": "81804a454babfbee2fb5737f293f013860380004d4b06277d1ef42a5242d7e8c"
+    },
+    "assets/site.css": {
+      "bytes": 6017,
+      "sha256": "374f4a311915b7f9ec0ac92162769eb0165e169bfbf559d3b354724286738a67"
+    },
+    "credits.html": {
+      "bytes": 1897,
+      "sha256": "78ec2da17c91810c79e687ebbc631c2fd2c8dba2fe51c646042de6856326b2a7"
+    },
+    "demo/index.audio.position.worklet.js": {
+      "bytes": 2973,
+      "sha256": "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8"
+    },
+    "demo/index.audio.worklet.js": {
+      "bytes": 7298,
+      "sha256": "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3"
+    },
+    "demo/index.html": {
+      "bytes": 4186,
+      "sha256": "cf4d3122fd1bb6e0f65b4482460d5e8ac8289c477b6ee129d0c60696e9d5caa8"
+    },
+    "demo/index.js": {
+      "bytes": 279815,
+      "sha256": "33c94cb3175f3333b82e2a3be5e8e86f77986f0aa2042b1631f6367a4e5bb6ba"
+    },
+    "demo/index.pck": {
+      "bytes": 144678712,
+      "sha256": "c371b633b914026e6402072ea9007abee9b50fee01ba6700f7d109f94bb67851"
+    },
+    "demo/index.png": {
+      "bytes": 21443,
+      "sha256": "3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e"
+    },
+    "demo/index.wasm": {
+      "bytes": 39514754,
+      "sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
+    },
+    "explore-3d/index.audio.position.worklet.js": {
+      "bytes": 2973,
+      "sha256": "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8"
+    },
+    "explore-3d/index.audio.worklet.js": {
+      "bytes": 7298,
+      "sha256": "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3"
+    },
+    "explore-3d/index.html": {
+      "bytes": 4208,
+      "sha256": "b845df6feb74ea39d3523fa72de49322f390855e91772b9c7be3ce491f7d2775"
+    },
+    "explore-3d/index.js": {
+      "bytes": 279815,
+      "sha256": "33c94cb3175f3333b82e2a3be5e8e86f77986f0aa2042b1631f6367a4e5bb6ba"
+    },
+    "explore-3d/index.pck": {
+      "bytes": 446019324,
+      "sha256": "546f3c2456cc7b5c54fd0b5de50319413274e6df64f6b16576e78822d77255ae"
+    },
+    "explore-3d/index.png": {
+      "bytes": 21443,
+      "sha256": "3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e"
+    },
+    "explore-3d/index.wasm": {
+      "bytes": 39514754,
+      "sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
+    },
+    "index.html": {
+      "bytes": 4551,
+      "sha256": "ec203dd0685711e8568417ed3a75955642f3b0566e8e3979b7c9c3213e7abb56"
+    }
+  }
+}
