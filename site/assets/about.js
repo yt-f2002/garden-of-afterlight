@@ -2,14 +2,16 @@
   'use strict';
   const pair=(zh,en)=>({zh,en});
   const copy={
-    skip:pair('跳到正文','Skip to content'),about:pair('关于','About'),guide:pair('玩法指南','How to play'),play:pair('进入庭院','Enter the garden'),
-    eyebrow:pair('遗光之庭','Garden of Afterlight'),title:pair('关于项目','About the project'),lede:pair('使用 Godot 制作的剧情与手作游戏。<br>内容涵盖调查、守线、调香、护理和工坊制作。','A story and crafting game built with Godot.<br>Explore, investigate, defend and create in six chapters.'),caption:pair('制衣工坊场景','Dressmaking workshop'),
-    creator:pair('作者','Creator'),creatorTitle:pair('作者简介','Creator profile'),
-    bio:pair('服装设计与工程背景，现就读于香港科技大学艺术与机器创造专业。曾参与 Video Rebirth 的 AI 产品评测、美图的 AI 视频特效制作及李宁的品牌内容工作。','I have a background in Fashion Design and Engineering and currently study Arts and Machine Creativity at HKUST. My experience includes AI product evaluation at Video Rebirth, AI video effects at Meitu, and brand content at Li-Ning.'),
-    bioTwo:pair('本项目由我负责世界观、玩法、视觉方向及整合，使用 AI 辅助素材和代码制作。','For this project, I direct the world, gameplay, visual design and integration, with AI assistance for assets and code.'),
-    contact:pair('合作 / 工作联系','For collaborations & work'),process:pair('工作流','Workflow'),workflowTitle:pair('制作流程','Production process'),workflowIntro:pair('点击阶段，查看创作分工、工具与产出。','Select a stage to see the decisions, tools and output.'),
-    iterate:pair('试玩反馈用于下一轮故事、素材和交互修改。','Playtest feedback informs the next revision of the story, assets and interactions.'),
-    growing:pair('版本说明','Versions'),growingText:pair('剧情试玩与 3D 探索原型共享同一个世界。3D 版目前提供第一人称空间探索，尚未实现独立的 3D 玩法。','The story demo and 3D exploration prototype share one world. The 3D version currently offers first-person exploration; dedicated 3D gameplay is not yet implemented.'),credits:pair('项目说明与致谢','Project notes & credits')
+    skip:pair('跳到正文','Skip to content'),guide:pair('玩法指南','How to play'),play:pair('进入游戏','Play the demo'),
+    bio:pair('从设计、AI 到交互体验，把视觉想法做成可以游玩的作品。','I work across design, AI and interactive experiences, turning visual ideas into playable projects.'),
+    study:pair('学习方向','Study areas'),fashion:pair('服装设计与工程','Fashion design & engineering'),creative:pair('艺术与机器创造','Arts & machine creativity'),
+    experience:pair('做过的事','Experience'),evaluation:pair('AI 产品评测','AI product evaluation'),effects:pair('AI 视频特效','AI video effects'),brand:pair('品牌内容','Brand content'),interaction:pair('游戏交互设计','Game interaction design'),visuals:pair('视觉素材制作','Visual asset creation'),godot:pair('Godot 整合','Godot integration'),
+    contact:pair('合作 / 工作联系','For collaborations & work'),
+    garden:pair('《遗光之庭》将剧情调查、守线与工坊制作连在一起，共有六章。','Garden of Afterlight connects story investigation, defense and hands-on crafting across six chapters.'),
+    role:pair('我负责世界观、玩法和视觉方向，使用 AI 辅助素材与代码制作。','I direct the world, gameplay and visual design, with AI assistance for assets and code.'),
+    workflowTitle:pair('制作流程','Production process'),workflowIntro:pair('点击阶段，查看创作分工、工具与产出。','Select a stage to see the decisions, tools and output.'),
+    iterate:pair('试玩反馈用于下一轮修改。','Playtest feedback informs the next revision.'),
+    versions:pair('3D 版目前提供第一人称探索，尚未实现独立的 3D 玩法。','The 3D prototype offers first-person exploration; dedicated 3D gameplay is not yet implemented.'),credits:pair('项目说明与致谢','Project notes & credits')
   };
   const stages=[
     {title:pair('故事与玩法','Story & gameplay'),hint:pair('定义体验','Define the experience'),subtitle:pair('确定章节目标与操作流程。','Define chapter goals and interaction steps.'),icon:'<path d="M4 5c4-2 7-1 8 0 2-1 5-2 8 0v15c-3-2-6-2-8-1-2-1-5-1-8 1Z M12 5v14"/>',human:pair('设定世界观、章节情绪、角色关系与核心交互；决定哪些想法值得保留。','Define the world, chapter mood, character relationships and core interactions; decide which ideas to keep.'),tools:pair('借助 ChatGPT 整理设计文档、梳理叙事逻辑和操作步骤。','Use ChatGPT to organize design documents, narrative logic and interaction steps.'),output:pair('章节结构、玩法规则，以及下一步需要制作的素材清单。','Chapter structure, gameplay rules and a list of assets to create.')},
@@ -22,6 +24,8 @@
   try{lang=localStorage.getItem('garden-handbook-language')||(navigator.language.startsWith('zh')?'zh':'en');}catch{}
   if(!['zh','en'].includes(lang))lang='en';
   const word=p=>p[lang], $=id=>document.getElementById(id);
+  const inline=new URLSearchParams(location.search).get('inline')==='1';
+  if(inline){document.body.classList.add('about-inline');document.querySelectorAll('a[href]').forEach(a=>{if(!a.getAttribute('href').startsWith('mailto:'))a.target='_top';});}
   function renderDetail(){
     const s=stages[active];
     document.querySelectorAll('.workflow-step').forEach((button,i)=>{button.setAttribute('aria-selected',String(i===active));button.tabIndex=i===active?0:-1;});
@@ -30,7 +34,8 @@
   }
   function render(){
     document.documentElement.lang=lang==='zh'?'zh-CN':'en';
-    document.title=(lang==='zh'?'关于项目':'About the project')+' — Garden of Afterlight';
+    document.querySelector('.creator-avatar').alt=lang==='zh'?'作者头像':'Creator portrait';
+    document.title='About — Garden of Afterlight';
     document.querySelectorAll('[data-copy]').forEach(n=>n.innerHTML=word(copy[n.dataset.copy]));
     $('language').textContent=lang==='zh'?'English':'中文';$('language').setAttribute('aria-label',lang==='zh'?'Switch to English':'切换为中文');
     $('workflow-steps').setAttribute('aria-label',lang==='zh'?'制作流程阶段':'Production stages');
@@ -44,5 +49,12 @@
     renderDetail();$(`step-${active}`).focus();
   });
   $('language').addEventListener('click',()=>{lang=lang==='zh'?'en':'zh';try{localStorage.setItem('garden-handbook-language',lang);}catch{}render();});
+  window.addEventListener('storage',event=>{if(event.key==='garden-handbook-language'&&['zh','en'].includes(event.newValue)){lang=event.newValue;render();}});
   render();
+  if(inline){
+    const reportHeight=()=>parent.postMessage({type:'garden-about-height',height:Math.ceil(document.body.getBoundingClientRect().height),ready:document.readyState==='complete'},location.origin);
+    new ResizeObserver(reportHeight).observe(document.body);
+    window.addEventListener('load',reportHeight);
+    reportHeight();
+  }
 })();

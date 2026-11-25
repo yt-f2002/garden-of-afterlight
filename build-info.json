@@ -52,8 +52,8 @@
       "sha256": "81804a454babfbee2fb5737f293f013860380004d4b06277d1ef42a5242d7e8c"
     },
     "assets/site.css": {
-      "bytes": 6187,
-      "sha256": "1533f7fa48756ab9d3c8e65f2d17a535447a8a1e86ab3e3afd6ac916a225627c"
+      "bytes": 6441,
+      "sha256": "ef36ae3c7c9d8b67b20f7cb477c57128c916bc48bd1cd2df9be964db4dade79e"
     },
     "credits.html": {
       "bytes": 1897,
@@ -116,20 +116,20 @@
       "sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
     },
     "index.html": {
-      "bytes": 3968,
-      "sha256": "3540ae00252b9df54ac12307900129dd62f4b95b2e7476e0d8ef79592c1931fb"
+      "bytes": 3439,
+      "sha256": "2755ed31000c2b7c05a21a683246c981c0fbec57dda09e6943043a6a5b40e840"
     },
     "about.html": {
-      "bytes": 4188,
-      "sha256": "7f132593e5373d5926c28542cc78e8377a65e005d6164d32a97d7055cc05a096"
+      "bytes": 4589,
+      "sha256": "279812120d7eb5a0f6c7861717eb1237b089a95bf3f57940ebf7119584ed483f"
     },
     "assets/about.css": {
-      "bytes": 7407,
-      "sha256": "64e2c38f9353098b6a0c78a1bb71d022da33c90c3f9afff9de1d1d8f920372ec"
+      "bytes": 7883,
+      "sha256": "82debf771fd5f93263e86207c7f5ca6f3371f0497ff66e3dad478eca3fff874f"
     },
     "assets/about.js": {
-      "bytes": 9328,
-      "sha256": "ba24e75d71c8d00e4b795ddd3e517005a6589dbc994a33e4bc3972cc4674a483"
+      "bytes": 9808,
+      "sha256": "9d9530b475ab4cd10bae600de07b0bea57ca148f02783a0e67f907190ce14d35"
     },
     "assets/guide/atelier.webp": {
       "bytes": 308028,
@@ -168,24 +168,24 @@
       "sha256": "4a5a1dbb6ea058ca17ced561073cbe90d3b4bb8ba145500f69cf359d85801b8e"
     },
     "assets/handbook.css": {
-      "bytes": 13278,
-      "sha256": "99d1b880950889d252eaa0d7d8ecf81ab66fe1f7e658d2a4e125834871572d3a"
+      "bytes": 13223,
+      "sha256": "0ce5599fe67cc6c4eae568b43105ce9af4f952dc6dea8f1101d603bbbc112404"
     },
     "assets/handbook.js": {
-      "bytes": 28094,
-      "sha256": "d776b247b00eb606fb1fe97c20b24285f14067d115febc7e8192aed9df80d455"
+      "bytes": 28292,
+      "sha256": "e47f73b1a12b10fcc8d7204f44f7d080cfe1dea2bd15e3136ce36f57a0b438db"
     },
     "assets/player-handbook.css": {
       "bytes": 892,
-      "sha256": "dfba5a9d9e005cf47e605210cef78482a01b4da21be9c9492d639e5e233d7f5e"
+      "sha256": "390cc8871704463a6e4d22c3e7573f49b2c6efeb11a0b6c71be53cf262afefad"
     },
     "how-to-play.html": {
       "bytes": 2757,
       "sha256": "33a480e272458615913899e696c15dea3fee584076c4cee05c6437c9b0a1b899"
     },
     "assets/home-guide.js": {
-      "bytes": 573,
-      "sha256": "7adfabe6555048fd48c8f5ff41950fb468617df2770c7996e77722ac4ca2551e"
+      "bytes": 1574,
+      "sha256": "d1aa614c796362a60ca1eae77ff11f3d625447b657c850355e15f91632353771"
     },
     "assets/handbook-shots.js": {
       "bytes": 4229,
@@ -302,6 +302,10 @@
     "assets/guide/screens/stars-workshop-zh.webp": {
       "bytes": 243674,
       "sha256": "b075bedb842d3ad6ac4be4b9d508c6ec6306ebfbd76c89a9998750908adef296"
+    },
+    "assets/creator-portrait.webp": {
+      "bytes": 221084,
+      "sha256": "8932ddf2449b33941f739220fdd3dfbf2bf01b0279894588d3c941e2d9579114"
     }
   }
 }

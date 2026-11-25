@@ -91,9 +91,10 @@
     const nodes=[...document.querySelectorAll('a[href],button,input,summary')].filter(n=>n.getClientRects().length&&!n.disabled);
     if((event.shiftKey&&document.activeElement===nodes[0])||(!event.shiftKey&&document.activeElement===nodes.at(-1))){event.preventDefault();parent.postMessage({type:'garden-handbook-focus-close'},location.origin);}
   });
+  window.addEventListener('storage',event=>{if(event.key==='garden-handbook-language'&&['zh','en'].includes(event.newValue)){lang=event.newValue;render();}});
   render();
   if(inline){
-    const reportHeight=()=>parent.postMessage({type:'garden-guide-height',height:Math.ceil(document.body.getBoundingClientRect().height)},location.origin);
+    const reportHeight=()=>parent.postMessage({type:'garden-guide-height',height:Math.ceil(document.body.getBoundingClientRect().height),ready:document.readyState==='complete'},location.origin);
     new ResizeObserver(reportHeight).observe(document.body);
     window.addEventListener('load',reportHeight);
     reportHeight();
