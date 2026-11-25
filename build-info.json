@@ -116,12 +116,12 @@
       "sha256": "2755ed31000c2b7c05a21a683246c981c0fbec57dda09e6943043a6a5b40e840"
     },
     "about.html": {
-      "bytes": 4679,
-      "sha256": "c37fb97feb8b257bff0693be476e389a801158bb854d542d5368d53e8e6b0f9f"
+      "bytes": 4839,
+      "sha256": "a5782df272d149eb5609d63dd08510dfaaef59d6df262c3ac80003455b16b852"
     },
     "assets/about.css": {
-      "bytes": 7850,
-      "sha256": "00f1365ce4abaf24a5aa7d5bd8a259ff5e827b7642362ab658bf4c79cdb150c4"
+      "bytes": 7763,
+      "sha256": "efe831a4484c85f5a5b86866f3c23268ca580b03a23b35d6e7b499d92fb0592a"
     },
     "assets/about.js": {
       "bytes": 9900,
