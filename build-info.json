@@ -32,16 +32,16 @@
   },
   "runtime_files": {
     "about.html": {
-      "bytes": 4475,
-      "sha256": "80dd5eb36e32dca6a7ba6e9155004d720fd83aff03de11d4c9f7b80b2215a824"
+      "bytes": 4839,
+      "sha256": "a5782df272d149eb5609d63dd08510dfaaef59d6df262c3ac80003455b16b852"
     },
     "assets/about.css": {
-      "bytes": 7697,
-      "sha256": "2abbba0f22219f198dc1cfe4730601c0686abfcff6408212e4c60d540711c0cb"
+      "bytes": 7763,
+      "sha256": "efe831a4484c85f5a5b86866f3c23268ca580b03a23b35d6e7b499d92fb0592a"
     },
     "assets/about.js": {
-      "bytes": 9808,
-      "sha256": "a46c3770610fee3507044c44fb04239b7a6128105e6bdd2b82ffadc5b524435b"
+      "bytes": 9900,
+      "sha256": "973524022e23e1dd23d84c89df50adc7c0a330ca2a3f227d5a884258873d9ff2"
     },
     "assets/atelier.webp": {
       "bytes": 143540,
