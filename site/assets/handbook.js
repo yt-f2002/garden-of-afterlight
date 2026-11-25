@@ -33,6 +33,8 @@
   const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const plain=s=>s.replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim();
   if(new URLSearchParams(location.search).get('embedded')==='1')document.body.classList.add('embedded');
+  const inline=new URLSearchParams(location.search).get('inline')==='1';
+  if(inline){document.body.classList.add('inline');document.querySelectorAll('a[href]').forEach(a=>{if(!a.getAttribute('href').startsWith('#'))a.target='_top';});}
   function closeMenu(){document.body.classList.remove('menu-open');$('menu').setAttribute('aria-expanded','false');$('veil').hidden=true;}
   function navigation(){
     $('categories').innerHTML=groups.map(g=>`<a href="#${entries.find(e=>e.group===g.id).id}" ${g.id===current.group?'aria-current="page"':''}>${word(g.label)}</a>`).join('');
@@ -52,7 +54,7 @@
     $('article-content').innerHTML=`<h1 class="article-heading">${word(current.title)}</h1><p class="article-deck">${word(current.deck)}</p>${current.image?`<figure class="chapter-art ${current.id==='welcome'?'intro-art':''}"><img src="assets/${current.image}" alt="${escape(word(current.caption))}"><figcaption class="art-caption">${word(current.caption)}</figcaption></figure>`:''}${current.flow?`<div class="flow" aria-label="${lang==='zh'?'操作顺序':'Activity sequence'}">${word(current.flow).map(v=>`<span>${v}</span>`).join('')}</div>`:''}${current.questions.map((item,i)=>`<details class="question" ${i===0?'open':''}><summary>${word(item.title)}</summary><div class="answer">${word(item.body)}</div></details>`).join('')}`;
     const i=entries.indexOf(current);
     $('page-turn').innerHTML=[entries[i-1],entries[i+1]].map((e,j)=>e?`<a href="#${e.id}"><small>${lang==='zh'?(j?'下一页':'上一页'):(j?'Next':'Previous')}</small><span>${word(e.title)}</span></a>`:'<span></span>').join('');
-    if(scroll){window.scrollTo({top:0,behavior:'instant'});$('article').focus({preventScroll:true});}
+    if(scroll){window.scrollTo({top:0,behavior:'instant'});$('article').focus({preventScroll:true});if(inline)parent.postMessage({type:'garden-guide-top'},location.origin);}
     search();
   }
   function search(){
@@ -75,4 +77,10 @@
     if((event.shiftKey&&document.activeElement===nodes[0])||(!event.shiftKey&&document.activeElement===nodes.at(-1))){event.preventDefault();parent.postMessage({type:'garden-handbook-focus-close'},location.origin);}
   });
   render();
+  if(inline){
+    const reportHeight=()=>parent.postMessage({type:'garden-guide-height',height:Math.ceil(document.body.getBoundingClientRect().height)},location.origin);
+    new ResizeObserver(reportHeight).observe(document.body);
+    window.addEventListener('load',reportHeight);
+    reportHeight();
+  }
 })();

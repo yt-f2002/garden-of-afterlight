@@ -52,8 +52,8 @@
       "sha256": "81804a454babfbee2fb5737f293f013860380004d4b06277d1ef42a5242d7e8c"
     },
     "assets/site.css": {
-      "bytes": 6017,
-      "sha256": "374f4a311915b7f9ec0ac92162769eb0165e169bfbf559d3b354724286738a67"
+      "bytes": 6187,
+      "sha256": "1533f7fa48756ab9d3c8e65f2d17a535447a8a1e86ab3e3afd6ac916a225627c"
     },
     "credits.html": {
       "bytes": 1897,
@@ -116,8 +116,8 @@
       "sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
     },
     "index.html": {
-      "bytes": 4923,
-      "sha256": "0db7a50a1e34521f87be913eb3a460205a609916971857bfa2b9ebf900dd4404"
+      "bytes": 3968,
+      "sha256": "3540ae00252b9df54ac12307900129dd62f4b95b2e7476e0d8ef79592c1931fb"
     },
     "about.html": {
       "bytes": 4188,
@@ -168,12 +168,12 @@
       "sha256": "4a5a1dbb6ea058ca17ced561073cbe90d3b4bb8ba145500f69cf359d85801b8e"
     },
     "assets/handbook.css": {
-      "bytes": 11325,
-      "sha256": "6c8a5a23b87f1639d0d4f5c12c6d963582966d865daabf97b59fb4bd13f75ce2"
+      "bytes": 11934,
+      "sha256": "7f0b4288648fc54e72033fb29370799f50f2584a0ab0e069ec1cf5cbcbc68931"
     },
     "assets/handbook.js": {
-      "bytes": 25674,
-      "sha256": "8f193c311426afb63dc0976ce0edac0d0b28d656f2cae323271db2a7bdde6c88"
+      "bytes": 26288,
+      "sha256": "3fc42a8bd9db652542ad7ab0db6c51d23875d98f9ffa6a7ab275ca27d6ec6307"
     },
     "assets/player-handbook.css": {
       "bytes": 892,
@@ -182,6 +182,10 @@
     "how-to-play.html": {
       "bytes": 2700,
       "sha256": "dcf3ed71db6562fd38dcfa9ee27d3aeb823d32e6ef205ea5f3b41805709158d1"
+    },
+    "assets/home-guide.js": {
+      "bytes": 573,
+      "sha256": "7adfabe6555048fd48c8f5ff41950fb468617df2770c7996e77722ac4ca2551e"
     }
   }
 }
