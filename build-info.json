@@ -53,7 +53,7 @@
     },
     "assets/site.css": {
       "bytes": 6441,
-      "sha256": "ef36ae3c7c9d8b67b20f7cb477c57128c916bc48bd1cd2df9be964db4dade79e"
+      "sha256": "a1534ab50ed1a426f50f6c088e22978520dcda71662d60d27ca957394c710a88"
     },
     "credits.html": {
       "bytes": 1897,
@@ -120,12 +120,12 @@
       "sha256": "2755ed31000c2b7c05a21a683246c981c0fbec57dda09e6943043a6a5b40e840"
     },
     "about.html": {
-      "bytes": 4787,
-      "sha256": "6b87990239ec0a604834b1319b9e830043221f921ec1e7b534975f5e26b374f0"
+      "bytes": 4852,
+      "sha256": "b4bc8906fc52d21cd993bc88687d68c3f9f62c6d7c4a43b7fe029f0399ff3b03"
     },
     "assets/about.css": {
-      "bytes": 7883,
-      "sha256": "82debf771fd5f93263e86207c7f5ca6f3371f0497ff66e3dad478eca3fff874f"
+      "bytes": 8192,
+      "sha256": "988e3645503d94f8175ac8268ab77db431685150ebcb9c0eafc8d2067220d8a7"
     },
     "assets/about.js": {
       "bytes": 10170,
